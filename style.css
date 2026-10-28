@@ -1,0 +1,2166 @@
+/* ==========================================================================
+   Routes of Dubai - Hero Section Design System (Preferred Clean Version)
+   ========================================================================== */
+
+/* 1. Design Tokens & Variables */
+:root {
+  --primary-orange: #F9570C;
+  --primary-orange-hover: #E44A05;
+  --dark-teal-bar: #0C3B3A;
+  --dark-teal-tab: #345953;
+  --bg-page: #FAF9F6;
+  --surface-white: #FFFFFF;
+  --text-dark: #11212D;
+  --text-body: #5B6A75;
+  --text-muted: #94A3B8;
+  --border-divider: #E2E8F0;
+  --border-tab-inactive: #EBECEF;
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-script: 'Caveat', cursive;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius-full: 9999px;
+  --radius-search-card: 24px;
+}
+
+/* 2. Global Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ==========================================================================
+   3. Top Utility Bar
+   ========================================================================== */
+.top-bar {
+  background-color: var(--dark-teal-bar);
+  color: #A6D2CD;
+  font-size: 12.5px;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 50;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+}
+
+.top-bar-contact {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #FFFFFF;
+}
+
+.top-svg {
+  width: 13.5px;
+  height: 13.5px;
+  stroke: #7CC2B9;
+  flex-shrink: 0;
+}
+
+.top-bar-meta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.social-group {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.social-svg {
+  width: 13.5px;
+  height: 13.5px;
+  color: #A6D2CD;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-group a:hover .social-svg {
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.lang-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-selector:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.chevron-tiny {
+  width: 11px;
+  height: 11px;
+  stroke: #A6D2CD;
+}
+
+/* ==========================================================================
+   4. Main Navigation Header
+   ========================================================================== */
+.main-header {
+  background: var(--surface-white);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon-wrap {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-top {
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--primary-orange);
+  margin-bottom: 2px;
+}
+
+.logo-mid {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #0E3633;
+}
+
+.logo-bot {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #1C6E62;
+  margin-top: 2px;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #4A5568;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #111827;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-orange);
+  border-radius: var(--radius-full);
+}
+
+/* Right Header Actions */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4B5563;
+  transition: all 0.2s ease;
+}
+
+.search-circle-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.search-circle-btn:hover {
+  background-color: #E5E7EB;
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+.plan-trip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-orange);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(249, 87, 12, 0.28);
+  transition: all 0.25s ease;
+}
+
+.plan-trip-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.plan-trip-btn:hover {
+  background-color: var(--primary-orange-hover);
+  box-shadow: 0 6px 18px rgba(249, 87, 12, 0.38);
+  transform: translateY(-1px);
+}
+
+.plan-trip-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+/* ==========================================================================
+   5. Hero Section
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 620px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  background-color: var(--bg-page);
+}
+
+/* Backdrop Skyline Image */
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.backdrop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  opacity: 1;
+}
+
+.backdrop-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(250, 249, 246, 0.72) 0%,
+    rgba(250, 249, 246, 0.45) 32%,
+    rgba(250, 249, 246, 0.12) 55%,
+    rgba(250, 249, 246, 0) 100%
+  ),
+  linear-gradient(
+    180deg,
+    rgba(250, 249, 246, 0) 0%,
+    rgba(250, 249, 246, 0) 70%,
+    rgba(250, 249, 246, 0.65) 90%,
+    #FAF9F6 100%
+  );
+}
+
+/* Left Palm Fronds Layer */
+.hero-palm-layer {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 340px;
+  height: 105%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.palm-fronds-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left top;
+}
+
+/* Subtle Dotted Flight Path & Mini Airplane */
+.subtle-flight-path {
+  position: absolute;
+  top: 50px;
+  left: 280px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.flight-dotted-svg {
+  width: 260px;
+  height: 95px;
+}
+
+.mini-flight-jet {
+  position: absolute;
+  top: 24px;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+  transform: rotate(38deg);
+  animation: planeHover 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes planeHover {
+  0% { transform: rotate(38deg) translateY(0); }
+  100% { transform: rotate(38deg) translateY(-3px); }
+}
+
+.left-palm-flight-path {
+  display: none;
+}
+
+/* Top-Right Delicate Flight Trail */
+.top-right-jet-trail {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 15;
+  width: 140px;
+  height: 60px;
+  pointer-events: none;
+}
+
+.right-trail-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.top-right-mini-plane {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  transform: rotate(-48deg);
+  animation: planeHover 3s ease-in-out infinite alternate;
+}
+
+/* Hero Content Grid */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  min-height: 440px;
+}
+
+/* Left Copywriting */
+.hero-left-content {
+  padding-left: 80px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 12;
+}
+
+.discover-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -8px;
+}
+
+.discover-tag > span {
+  font-family: var(--font-script);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  display: inline-block;
+  transform: rotate(-3deg);
+  letter-spacing: 0.5px;
+}
+
+.discover-rays {
+  display: inline-flex;
+  gap: 3.5px;
+  align-items: center;
+  margin-top: -6px;
+}
+
+.disc-ray {
+  display: inline-block;
+  background-color: var(--primary-orange);
+  border-radius: 999px;
+  width: 2.5px;
+}
+
+.disc-ray-1 {
+  height: 7px;
+  transform: rotate(-30deg);
+}
+
+.disc-ray-2 {
+  height: 10px;
+  transform: rotate(0deg);
+}
+
+.disc-ray-3 {
+  height: 7px;
+  transform: rotate(30deg);
+}
+
+.hero-main-title {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.02;
+  color: var(--text-dark);
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.word-dubai {
+  position: relative;
+  display: block;
+}
+
+/* 4-Ray Radiant Orange Sunburst over the 'i' dot */
+.sunburst-over-i {
+  position: absolute;
+  top: -12px;
+  left: 190px;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+.burst-ray {
+  position: absolute;
+  background-color: var(--primary-orange);
+  border-radius: 999px;
+}
+
+.ray-tl {
+  width: 2.5px;
+  height: 9px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-42deg);
+}
+
+.ray-tm {
+  width: 2.5px;
+  height: 10px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-14deg);
+}
+
+.ray-tr {
+  width: 2.5px;
+  height: 10px;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%) rotate(18deg);
+}
+
+.ray-mr {
+  width: 2.5px;
+  height: 9px;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(52deg);
+}
+
+.word-your-way {
+  display: block;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-body);
+  max-width: 440px;
+}
+
+/* Right Visual Montage */
+.hero-right-visual {
+  position: relative;
+  height: 440px;
+  width: 100%;
+}
+
+/* Explore Experience Enjoy cursive script */
+.script-stack-tag {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 15;
+  font-family: var(--font-script);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #162423;
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.script-stack-tag span {
+  display: block;
+}
+
+.enjoy-flourish {
+  display: block;
+  width: 24px;
+  height: 18px;
+  margin-top: 3px;
+  margin-left: 18px;
+}
+
+.enjoy-flourish svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Arches & Montage Composition
+   ========================================================================== */
+.arch-frame {
+  position: absolute;
+  background: var(--surface-white);
+  border: 4px solid var(--surface-white);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Center Arch: Burj Khalifa */
+.arch-center {
+  width: 235px;
+  height: 380px;
+  top: 25px;
+  left: 70px;
+  border-radius: 125px 125px 26px 26px;
+  z-index: 12;
+}
+
+.arch-center:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.18);
+}
+
+.arch-crop {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.arch-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.5s ease;
+}
+
+.arch-frame:hover .arch-img {
+  transform: scale(1.04);
+}
+
+/* Right Arch: Burj Al Arab */
+.arch-right {
+  width: 200px;
+  height: 310px;
+  top: 90px;
+  right: 32px;
+  border-radius: 105px 105px 24px 24px;
+  z-index: 11;
+}
+
+.arch-right:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+}
+
+/* Tilted Polaroid Card: Desert Safari */
+.polaroid-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 190px;
+  z-index: 14;
+  transform: rotate(-10deg);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.polaroid-wrapper:hover {
+  transform: rotate(-6deg) scale(1.04);
+}
+
+.polaroid-inner {
+  background-color: var(--surface-white);
+  padding: 8px 8px 24px 8px;
+  border-radius: 5px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.polaroid-media {
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #F3F4F6;
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.polaroid-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.polaroid-stamp {
+  width: 13px;
+  height: 13px;
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   6. Floating Search & Booking Bar Widget
+   ========================================================================== */
+.search-outer-wrap {
+  position: relative;
+  z-index: 25;
+  margin-top: -32px;
+}
+
+.search-widget {
+  width: 100%;
+}
+
+/* Tabs Shelf */
+.tabs-shelf {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 24px;
+  margin-bottom: 6px;
+  position: relative;
+  z-index: 5;
+}
+
+.pill-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9.5px 20px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #4B5563;
+  background-color: #F4F5F7;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.pill-tab .tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}
+
+.pill-tab .tab-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pill-tab:hover {
+  background-color: #EAECEF;
+  color: var(--text-dark);
+}
+
+/* Active Tab: Dark Slate Teal with downward caret */
+.pill-tab.active {
+  background-color: #0D4E48;
+  color: #FFFFFF;
+  border-color: #0D4E48;
+  box-shadow: 0 4px 12px rgba(13, 78, 72, 0.28);
+}
+
+.pill-tab.active .active-tab-caret {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #0D4E48;
+}
+
+/* Search Bar Strip */
+.search-bar-strip {
+  background-color: var(--surface-white);
+  border-radius: 28px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  padding: 12px 14px 12px 14px;
+  gap: 12px;
+}
+
+.field-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F4F5F7;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+.field-col:hover {
+  background-color: #ECEEF2;
+}
+
+.col-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6B7280;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
+
+.col-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.col-text {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.col-text.muted-text {
+  color: #111827;
+  font-weight: 700;
+}
+
+.chevron-svg {
+  width: 15px;
+  height: 15px;
+  stroke: #4B5563;
+  flex-shrink: 0;
+}
+
+.trailing-icon {
+  width: 17px;
+  height: 17px;
+  stroke: #4B5563;
+  flex-shrink: 0;
+}
+
+.strip-divider {
+  display: none;
+}
+
+/* Search Submit Button */
+.search-btn-col {
+  flex-shrink: 0;
+}
+
+.search-submit-button {
+  background: linear-gradient(135deg, #FF6820 0%, #F9570C 100%);
+  color: #FFFFFF;
+  padding: 15px 44px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(249, 87, 12, 0.35);
+  transition: all 0.25s ease;
+}
+
+.search-submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(249, 87, 12, 0.45);
+}
+
+.search-submit-button:active {
+  transform: translateY(0);
+}
+
+/* Mobile Menu Trigger Button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--primary-orange);
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+/* ==========================================================================
+   7. Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-left-content {
+    padding-left: 30px;
+  }
+  .hero-main-title {
+    font-size: 58px;
+  }
+  .arch-center {
+    width: 200px;
+    height: 320px;
+    left: 40px;
+  }
+  .arch-right {
+    width: 170px;
+    height: 260px;
+    right: 20px;
+  }
+  .polaroid-wrapper {
+    left: 140px;
+  }
+}
+
+/* Tablet Screens (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+  }
+  .hero-left-content {
+    padding-left: 0;
+  }
+  .hero-description {
+    margin: 14px 0 0;
+  }
+  .hero-right-visual {
+    height: 340px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .search-bar-strip {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+  .strip-divider {
+    display: none;
+  }
+  .field-col {
+    flex: 1 1 calc(50% - 10px);
+    border: 1px solid var(--border-tab-inactive);
+    border-radius: 8px;
+  }
+  .search-btn-col {
+    width: 100%;
+  }
+  .search-submit-button {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Exact Mobile Phone Layout (Matches Mockup Reference)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+
+  .site-container {
+    padding: 0 16px;
+  }
+
+  /* Header */
+  .main-header {
+    background-color: transparent;
+    position: relative;
+    z-index: 50;
+  }
+
+  .header-inner {
+    height: 58px;
+    padding: 0;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .logo-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links,
+  .search-circle-btn,
+  .plan-trip-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 38px;
+    height: 38px;
+    background-color: var(--primary-orange);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+    box-shadow: 0 3px 10px rgba(249, 87, 12, 0.28);
+  }
+
+  .mobile-menu-btn span {
+    display: block;
+    width: 19px;
+    height: 2px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: 8px;
+    padding-bottom: 24px;
+    min-height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Backdrop Skyline with Bright Blue Sky */
+  .hero-backdrop {
+    height: 600px;
+  }
+
+  .hero-backdrop .backdrop-img {
+    object-position: 50% 12%;
+    opacity: 1;
+  }
+
+  .hero-backdrop .backdrop-mask {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      rgba(255, 255, 255, 0.25) 55%,
+      rgba(250, 249, 246, 0.85) 85%,
+      #FAF9F6 100%
+    );
+  }
+
+  /* Tropical Palm Fronds Layer on Left */
+  .hero-palm-layer {
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: -40px;
+    width: 210px;
+    height: 380px;
+    z-index: 5;
+    opacity: 0.95;
+    pointer-events: none;
+  }
+
+  /* Hero Container - Integrated Composition */
+  .hero-container {
+    display: block;
+    position: relative;
+    min-height: 480px;
+    margin-bottom: 0;
+  }
+
+  /* Left Text Block */
+  .hero-left-content {
+    position: relative;
+    z-index: 15;
+    padding: 0;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .discover-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: -4px;
+  }
+
+  .discover-tag > span {
+    font-size: 38px;
+    color: var(--primary-orange);
+    font-family: var(--font-script);
+    transform: rotate(-3deg);
+    letter-spacing: 0.5px;
+  }
+
+  .discover-rays {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    margin-top: -6px;
+  }
+
+  .disc-ray {
+    width: 2.5px;
+    border-radius: 999px;
+  }
+
+  .disc-ray-1 {
+    height: 6px;
+    transform: rotate(-30deg);
+  }
+
+  .disc-ray-2 {
+    height: 9px;
+    transform: rotate(0deg);
+  }
+
+  .disc-ray-3 {
+    height: 6px;
+    transform: rotate(30deg);
+  }
+
+  .hero-main-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -1.5px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+  }
+
+  .word-dubai {
+    display: inline-block;
+    position: relative;
+  }
+
+  .sunburst-over-i {
+    display: none; /* Replaced by discover-rays on mobile */
+  }
+
+  .word-your-way {
+    display: block;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #475569;
+    font-weight: 500;
+    max-width: 215px;
+    margin: 6px 0 0 0;
+  }
+
+  /* Subtle Flight Path Next to Dubai */
+  .subtle-flight-path {
+    position: absolute;
+    top: 40px;
+    left: 175px;
+    right: auto;
+    z-index: 14;
+    display: block;
+    pointer-events: none;
+  }
+
+  .flight-dotted-svg {
+    width: 105px;
+    height: 48px;
+  }
+
+  .mini-flight-jet {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(38deg);
+  }
+
+  /* Explore Experience Enjoy in Top Right Sky */
+  .hero-right-visual {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .script-stack-tag {
+    position: absolute;
+    top: 36px;
+    right: 12px;
+    left: auto;
+    font-size: 22px;
+    line-height: 1.15;
+    color: #1E293B;
+    text-align: left;
+    transform: rotate(-3deg);
+    z-index: 16;
+    pointer-events: none;
+  }
+
+  .enjoy-flourish {
+    display: block;
+    width: 24px;
+    height: 18px;
+    margin-top: 3px;
+    margin-left: 20px;
+  }
+
+  .top-right-jet-trail {
+    display: none;
+  }
+
+  /* Left Palm Dotted Flight Loop */
+  .left-palm-flight-path {
+    display: block;
+    position: absolute;
+    top: 245px;
+    left: 20px;
+    z-index: 7;
+    pointer-events: none;
+  }
+
+  .left-trail-svg {
+    width: 110px;
+    height: 55px;
+  }
+
+  .left-mini-plane {
+    position: absolute;
+    top: 18px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+  }
+
+  /* Center Arch: Burj Khalifa */
+  .arch-center {
+    position: absolute;
+    top: 225px;
+    left: 33%;
+    width: 155px;
+    height: 285px;
+    border-radius: 85px 85px 24px 24px;
+    border: 3.5px solid #FFFFFF;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+    z-index: 10;
+  }
+
+  /* Right Arch: Burj Al Arab (higher up on the right) */
+  .arch-right {
+    position: absolute;
+    top: 185px;
+    right: 10px;
+    left: auto;
+    width: 130px;
+    height: 275px;
+    border-radius: 75px 75px 22px 22px;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    z-index: 9;
+  }
+
+  /* Polaroid: Desert Safari Jeep (Tilted clockwise matching mockup) */
+  .polaroid-wrapper {
+    position: absolute;
+    top: 355px;
+    right: 16px;
+    left: auto;
+    width: 110px;
+    transform: rotate(7deg);
+    z-index: 12;
+  }
+
+  .polaroid-inner {
+    padding: 6px 6px 18px 6px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  }
+
+  .polaroid-media {
+    width: 98px;
+    height: 98px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .polaroid-bottom {
+    display: none;
+  }
+
+  /* Floating Search & Booking Card on Mobile */
+  .search-outer-wrap {
+    margin-top: -30px; /* Overlaps bottom of the arches */
+    position: relative;
+    z-index: 25;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .search-widget {
+    background-color: #FFFFFF;
+    border-radius: 28px;
+    padding: 16px 14px 18px 14px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.09);
+    width: 100%;
+  }
+
+  /* Top 3 Pill Tabs Inside the Card */
+  .tabs-shelf {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pill-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8.5px 6px;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: var(--radius-full);
+    background-color: #F3F4F6;
+    color: #4B5563;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .pill-tab.active {
+    background-color: #0D4E48;
+    color: #FFFFFF;
+  }
+
+  .pill-tab.active .tab-icon svg {
+    stroke: #E89E3A;
+  }
+
+  .pill-tab.active .active-tab-caret {
+    display: none;
+  }
+
+  .pill-tab .tab-icon {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pill-tab .tab-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pill-tab .tab-title {
+    font-size: 11.5px;
+  }
+
+  /* 4 Stacked Input Wells */
+  .search-bar-strip {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .field-col {
+    width: 100%;
+    flex: none;
+    background-color: #F4F5F7;
+    border-radius: 13px;
+    padding: 10px 16px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .col-label {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #6B7280;
+    margin-bottom: 2px;
+  }
+
+  .col-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .col-text,
+  .col-text.muted-text {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .chevron-svg,
+  .trailing-icon {
+    width: 17px;
+    height: 17px;
+    color: #4B5563;
+  }
+
+  .strip-divider {
+    display: none;
+  }
+
+  .search-btn-col {
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .search-submit-button {
+    width: 100%;
+    padding: 14.5px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--primary-orange);
+    color: #FFFFFF;
+    border-radius: var(--radius-full);
+    border: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(249, 87, 12, 0.35);
+  }
+}
+
+/* ==========================================================================
+   8. Section 2: Quick Services, Top Attractions & Trust Stats Showcase
+   ========================================================================== */
+
+.section2-showcase {
+  position: relative;
+  background-color: var(--bg-page);
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Tier 1: Three Quick Action Service Cards
+   -------------------------------------------------------------------------- */
+.quick-services-container {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 70px;
+}
+
+.services-flight-trail {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.services-trail-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flight-paper-plane {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 22px;
+  height: 22px;
+  transform: rotate(35deg);
+  opacity: 0.85;
+}
+
+.quick-services-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.quick-service-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--surface-white);
+  padding: 18px 22px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.quick-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: rgba(249, 87, 12, 0.15);
+}
+
+.card-icon-plate {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+.quick-service-card:hover .card-icon-plate {
+  transform: scale(1.06);
+}
+
+.plate-mint {
+  background-color: #D6F2ED;
+}
+
+.plate-peach {
+  background-color: #FFEADB;
+}
+
+.plate-3d-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+}
+
+.card-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.card-desc {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--text-body);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.card-circle-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.btn-teal {
+  background-color: #0D4E48;
+}
+
+.btn-orange {
+  background-color: var(--primary-orange);
+}
+
+.quick-service-card:hover .card-circle-btn {
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   Tier 2: Top Attractions in Dubai Showcase
+   -------------------------------------------------------------------------- */
+.attractions-outer-wrap {
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.tropical-leaf-bg {
+  position: absolute;
+  top: -60px;
+  left: -20px;
+  width: 260px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.leaf-corner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left top;
+}
+
+.attractions-flex-layout {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  align-items: center;
+  gap: 36px;
+}
+
+.attractions-header-col {
+  position: relative;
+  z-index: 6;
+}
+
+.popular-script-tag {
+  font-family: var(--font-script);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  display: inline-block;
+  transform: rotate(-2deg);
+  margin-bottom: -4px;
+}
+
+.attractions-section-title {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--text-dark);
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.attractions-section-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-body);
+  margin-bottom: 24px;
+  max-width: 270px;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 22px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #D5DDE5;
+  background-color: var(--surface-white);
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.view-all-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+
+.view-all-btn:hover {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 87, 12, 0.12);
+}
+
+.view-all-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* 4 Attraction Cards Grid */
+.attractions-cards-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.attraction-card {
+  background-color: var(--surface-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+}
+
+.attraction-img-box {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  position: relative;
+  background-color: #E2E8F0;
+  border-radius: 18px 18px 0 0;
+}
+
+.attraction-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.attraction-card:hover .attraction-img {
+  transform: scale(1.06);
+}
+
+.attraction-info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: var(--surface-white);
+}
+
+.attraction-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.attraction-title {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.attraction-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.loc-pin-svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.attraction-circle-link {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  flex-shrink: 0;
+  margin-left: 8px;
+  transition: all 0.2s ease;
+}
+
+.attraction-circle-link svg {
+  width: 13px;
+  height: 13px;
+}
+
+.attraction-card:hover .attraction-circle-link {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+  color: #FFFFFF;
+  transform: translateX(2px);
+}
+
+/* --------------------------------------------------------------------------
+   Tier 3: Floating Trust & Stats Bar + Sunset Skyline Panorama
+   -------------------------------------------------------------------------- */
+.stats-panorama-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.stats-capsule-container {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -56px;
+}
+
+.stats-capsule-card {
+  background-color: var(--surface-white);
+  border-radius: 9999px;
+  padding: 22px 42px;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  padding: 4px 22px;
+}
+
+.stat-item:not(:last-child) {
+  border-right: 1.5px solid #EEF2F6;
+}
+
+.stat-icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.stats-capsule-card:hover .stat-icon-wrap {
+  transform: scale(1.05);
+}
+
+.mint-icon {
+  background-color: #D8F3EE;
+}
+
+.solid-teal-icon {
+  background-color: #0D4E48;
+}
+
+.stat-vector-svg {
+  width: 28px;
+  height: 28px;
+  stroke: #0D4E48;
+  flex-shrink: 0;
+}
+
+.stat-vector-svg.white-svg {
+  stroke: #FFFFFF;
+}
+
+.stat-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.stat-label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #64748B;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+
+/* Sunset Panorama Backdrop */
+.sunset-panorama-backdrop {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+
+.sunset-skyline-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.sunset-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(250, 249, 246, 0.45) 0%,
+    rgba(250, 249, 246, 0) 35%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  pointer-events: none;
+}
+
+.sky-airplane-trail {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 280px;
+  height: 110px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.sky-trail-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sky-mini-jet {
+  position: absolute;
+  top: 24px;
+  right: 2px;
+  width: 28px;
+  height: 28px;
+  transform: rotate(215deg);
+  animation: planeHover 3.5s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations for Section 2
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .attractions-flex-layout {
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+  }
+  .attractions-section-title {
+    font-size: 34px;
+  }
+  .attractions-cards-col {
+    gap: 12px;
+  }
+  .stats-capsule-card {
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .quick-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .attractions-flex-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .attractions-header-col {
+    max-width: 100%;
+  }
+  .attractions-section-desc {
+    max-width: 520px;
+  }
+  .attractions-cards-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .stats-capsule-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 24px;
+    gap: 16px;
+  }
+  .stat-item:not(:last-child) {
+    border-right: none;
+  }
+  .stat-item:nth-child(1),
+  .stat-item:nth-child(2) {
+    border-bottom: 1px solid #EEF2F6;
+    padding-bottom: 14px;
+  }
+  .sunset-panorama-backdrop {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section2-showcase {
+    padding-top: 40px;
+  }
+  .quick-services-container {
+    margin-bottom: 48px;
+  }
+  .services-flight-trail {
+    display: none;
+  }
+  .quick-services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .quick-service-card {
+    padding: 14px 18px;
+    border-radius: 18px;
+  }
+  .card-icon-plate {
+    width: 52px;
+    height: 52px;
+  }
+  .plate-3d-img {
+    width: 42px;
+    height: 42px;
+  }
+  .card-title {
+    font-size: 15px;
+  }
+  .card-desc {
+    font-size: 12px;
+  }
+  .card-circle-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .tropical-leaf-bg {
+    width: 150px;
+    height: 280px;
+    top: -20px;
+    opacity: 0.6;
+  }
+  .attractions-section-title {
+    font-size: 28px;
+  }
+  .attractions-cards-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .attraction-info-bar {
+    padding: 10px 10px;
+  }
+  .attraction-title {
+    font-size: 13px;
+  }
+  .attraction-location {
+    font-size: 11px;
+  }
+  .attraction-circle-link {
+    width: 26px;
+    height: 26px;
+    margin-left: 4px;
+  }
+  .stats-capsule-container {
+    margin-bottom: -60px;
+  }
+  .stats-capsule-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 20px;
+  }
+  .stat-item {
+    padding: 6px 0;
+  }
+  .stat-item:not(:last-child) {
+    border-bottom: 1px solid #EEF2F6;
+    border-right: none;
+    padding-bottom: 10px;
+  }
+  .stat-number {
+    font-size: 20px;
+  }
+  .stat-label {
+    font-size: 12px;
+  }
+  .sunset-panorama-backdrop {
+    height: 220px;
+  }
+  .sky-airplane-trail {
+    right: 20px;
+    width: 140px;
+  }
+}
+
