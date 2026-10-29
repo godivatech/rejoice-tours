@@ -3339,7 +3339,7 @@ a.contact-text:hover {
 }
 
 .developer-credit a.godivatech-link:hover strong {
-  color: #FF5E00;
+  color: var(--primary-orange);
   text-decoration: underline;
 }
 
@@ -3485,10 +3485,10 @@ a.contact-text:hover {
 }
 
 .visa-hero-container {
-  max-width: 1440px;
+  max-width: 1380px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 32px;
   display: grid;
   grid-template-columns: 1fr 1.35fr;
   gap: 36px;
@@ -3511,12 +3511,12 @@ a.contact-text:hover {
   font-family: var(--font-heading);
   font-size: 14px;
   font-weight: 600;
-  color: #334155;
+  color: var(--text-body);
   margin-bottom: 22px;
 }
 
 .visa-breadcrumbs a {
-  color: #334155;
+  color: var(--text-body);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -3526,21 +3526,21 @@ a.contact-text:hover {
 }
 
 .visa-breadcrumbs .bc-sep {
-  color: #64748B;
+  color: var(--text-muted);
   font-size: 13px;
 }
 
 .visa-breadcrumbs .bc-current {
-  color: #0F172A;
+  color: var(--text-dark);
   font-weight: 700;
 }
 
 .visa-script-orange {
   display: block;
-  font-family: 'Caveat', cursive;
-  font-size: 38px;
+  font-family: var(--font-script);
+  font-size: 34px;
   font-weight: 700;
-  color: #FF7A00;
+  color: var(--primary-orange);
   line-height: 1.1;
   margin-bottom: 6px;
   letter-spacing: 0.5px;
@@ -3549,19 +3549,19 @@ a.contact-text:hover {
 
 .visa-hero-title {
   font-family: var(--font-heading);
-  font-size: 58px;
+  font-size: 60px;
   font-weight: 800;
-  color: #111827;
-  line-height: 1.08;
+  color: var(--text-dark);
+  line-height: 1.05;
   letter-spacing: -1.5px;
   margin: 0 0 18px 0;
 }
 
 .visa-hero-lead {
   font-family: var(--font-body);
-  font-size: 15.5px;
+  font-size: 16px;
   font-weight: 450;
-  color: #334155;
+  color: var(--text-body);
   line-height: 1.65;
   max-width: 440px;
   margin-bottom: 32px;
@@ -3620,8 +3620,8 @@ a.contact-text:hover {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #FF5E00;
-  background: linear-gradient(135deg, #FF6A00 0%, #FF5000 100%);
+  background: var(--primary-orange);
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-hover) 100%);
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 15.5px;
@@ -3629,7 +3629,7 @@ a.contact-text:hover {
   padding: 15px 34px;
   border-radius: var(--radius-full);
   text-decoration: none;
-  box-shadow: 0 8px 25px rgba(255, 94, 0, 0.38);
+  box-shadow: 0 8px 25px rgba(249, 87, 12, 0.35);
   transition: all 0.25s ease;
 }
 
@@ -3919,7 +3919,7 @@ a.contact-text:hover {
 }
 
 .visa-types-container {
-  max-width: 1320px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0 32px;
 }
@@ -3944,21 +3944,21 @@ a.contact-text:hover {
 
 .types-script-subtitle {
   display: block;
-  font-family: 'Caveat', cursive;
-  font-size: 28px;
+  font-family: var(--font-script);
+  font-size: 32px;
   font-weight: 700;
-  color: #FF7A00;
+  color: var(--primary-orange);
   line-height: 1;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .types-main-heading {
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 42px;
   font-weight: 800;
-  color: #111827;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  color: var(--text-dark);
+  line-height: 1.12;
+  letter-spacing: -0.8px;
   margin: 0;
 }
 
@@ -3968,9 +3968,9 @@ a.contact-text:hover {
 
 .types-lead-paragraph {
   font-family: var(--font-body);
-  font-size: 13.5px;
-  color: #4B5563;
-  line-height: 1.5;
+  font-size: 15.5px;
+  color: var(--text-body);
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -3983,16 +3983,23 @@ a.contact-text:hover {
   align-items: center;
   gap: 6px;
   background-color: #FFFFFF;
-  border: 1px solid #D1D5DB;
-  color: #1F2937;
-  padding: 7px 18px;
+  border: 1.5px solid var(--border-divider);
+  color: var(--text-dark);
+  padding: 8px 20px;
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: all 0.25s ease;
+}
+
+.types-view-all-btn:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  color: var(--primary-orange);
+  transform: translateX(2px);
 }
 
 .types-view-all-btn svg {
@@ -4112,7 +4119,7 @@ a.contact-text:hover {
 }
 
 .type-details-link:hover {
-  color: #FF5E00;
+  color: var(--primary-orange);
 }
 
 .type-details-link:hover .link-arrow {
@@ -4124,7 +4131,7 @@ a.contact-text:hover {
   height: 32px;
   border-radius: 50%;
   background: #FEEAD7;
-  color: #111827;
+  color: var(--text-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4133,7 +4140,7 @@ a.contact-text:hover {
 }
 
 .type-circle-btn:hover {
-  background: #FF5E00;
+  background: var(--primary-orange);
   color: #FFFFFF;
   transform: translateX(2px);
 }
@@ -4205,19 +4212,19 @@ a.contact-text:hover {
 
 .docs-script-subtitle {
   display: block;
-  font-family: 'Caveat', cursive;
-  font-size: 34px;
+  font-family: var(--font-script);
+  font-size: 32px;
   font-weight: 700;
-  color: #FF7A00;
+  color: var(--primary-orange);
   line-height: 1;
   margin-bottom: 4px;
 }
 
 .docs-main-heading {
   font-family: var(--font-heading);
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 800;
-  color: #111827;
+  color: var(--text-dark);
   line-height: 1.1;
   letter-spacing: -0.8px;
   margin: 0 0 14px 0;
@@ -4225,10 +4232,10 @@ a.contact-text:hover {
 
 .docs-lead-paragraph {
   font-family: var(--font-body);
-  font-size: 14px;
-  color: #475569;
+  font-size: 15.5px;
+  color: var(--text-body);
   line-height: 1.6;
-  max-width: 300px;
+  max-width: 320px;
   margin: 0;
 }
 
@@ -4349,17 +4356,17 @@ a.contact-text:hover {
 
 .how-main-heading {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 800;
-  color: #0D2A30;
-  letter-spacing: -0.5px;
-  margin: 0 0 8px 0;
+  color: var(--text-dark);
+  letter-spacing: -0.8px;
+  margin: 0 0 10px 0;
 }
 
 .how-lead-paragraph {
   font-family: var(--font-body);
-  font-size: 14px;
-  color: #4A6B70;
+  font-size: 15.5px;
+  color: var(--text-body);
   margin: 0;
 }
 
@@ -4438,9 +4445,9 @@ a.contact-text:hover {
 
 .how-step-title {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 16.5px;
   font-weight: 800;
-  color: #0D2A30;
+  color: var(--text-dark);
   margin: 0;
   letter-spacing: -0.3px;
   line-height: 1.25;
@@ -4448,9 +4455,9 @@ a.contact-text:hover {
 
 .how-step-desc {
   font-family: var(--font-body);
-  font-size: 13px;
-  color: #4A6B70;
-  line-height: 1.45;
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -4493,8 +4500,9 @@ a.contact-text:hover {
   grid-template-columns: 280px 380px 1fr;
   gap: 36px;
   align-items: flex-end;
-  max-width: 1320px;
+  max-width: 1380px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 /* Zone 1 (Left Column): Text Content & Stacked Contact Cards */
@@ -4512,28 +4520,28 @@ a.contact-text:hover {
 
 .experts-script-subtitle {
   display: block;
-  font-family: 'Caveat', cursive;
-  font-size: 30px;
+  font-family: var(--font-script);
+  font-size: 32px;
   font-weight: 700;
-  color: #FF5E00;
+  color: var(--primary-orange);
   line-height: 1;
   margin-bottom: 4px;
 }
 
 .experts-main-heading {
   font-family: var(--font-heading);
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 800;
-  color: #0F172A;
+  color: var(--text-dark);
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.8px;
   margin: 0 0 14px;
 }
 
 .experts-lead-paragraph {
   font-family: var(--font-body);
-  font-size: 14.5px;
-  color: #64748B;
+  font-size: 15.5px;
+  color: var(--text-body);
   line-height: 1.6;
   margin: 0;
 }
@@ -4615,7 +4623,7 @@ a.contact-text:hover {
 }
 
 .expert-contact-pill:hover .pill-arrow-col {
-  color: #FF5E00;
+  color: var(--primary-orange);
   transform: translateX(3px);
 }
 
@@ -4663,10 +4671,10 @@ a.contact-text:hover {
 
 .faq-main-heading {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 800;
-  color: #0F172A;
-  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  letter-spacing: -0.8px;
   margin: 0;
 }
 
@@ -4674,14 +4682,14 @@ a.contact-text:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 18px;
+  padding: 8px 20px;
   background: #FFFFFF;
-  border: 1.5px solid #E2E8F0;
-  border-radius: 50px;
+  border: 1.5px solid var(--border-divider);
+  border-radius: var(--radius-full);
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 600;
-  color: #0F172A;
+  color: var(--text-dark);
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -4762,7 +4770,7 @@ a.contact-text:hover {
 
 .faq-accordion-item.active .faq-toggle-icon {
   transform: rotate(45deg);
-  color: #FF5E00;
+  color: var(--primary-orange);
 }
 
 .faq-accordion-panel {
@@ -4910,8 +4918,9 @@ a.contact-text:hover {
 .cta-banner-container {
   position: relative;
   z-index: 2;
-  max-width: 1320px;
+  max-width: 1380px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 .cta-banner-content {
@@ -4922,19 +4931,19 @@ a.contact-text:hover {
 
 .cta-banner-heading {
   font-family: var(--font-heading);
-  font-size: 38px;
+  font-size: 42px;
   font-weight: 800;
-  color: #0F172A;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
+  color: var(--text-dark);
+  letter-spacing: -0.8px;
+  margin: 0 0 12px;
 }
 
 .cta-banner-lead {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: #334155;
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 620px;
   margin: 0 auto 28px;
 }
@@ -4948,25 +4957,25 @@ a.contact-text:hover {
 }
 
 .cta-btn-primary {
-  background: #FF5E00;
+  background: var(--primary-orange);
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 15px;
   font-weight: 700;
-  padding: 13px 28px;
-  border-radius: 50px;
+  padding: 14px 30px;
+  border-radius: var(--radius-full);
   display: inline-flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(255, 94, 0, 0.32);
+  box-shadow: 0 4px 16px rgba(249, 87, 12, 0.32);
   transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cta-btn-primary:hover {
-  background: #E04B05;
+  background: var(--primary-orange-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 94, 0, 0.42);
+  box-shadow: 0 6px 20px rgba(249, 87, 12, 0.42);
 }
 
 .cta-btn-whatsapp {
