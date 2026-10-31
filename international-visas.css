@@ -1,0 +1,477 @@
+/* ==========================================================================
+   INTERNATIONAL VISAS PAGE STYLESHEET (ISOLATED MODULAR ARCHITECTURE)
+   Dedicated styles for international-visas.html
+   Fully aligned with Routes of Dubai design tokens & typography scale
+   ========================================================================== */
+
+/* Page Level Resets & Defaults */
+.international-visas-page {
+  background-color: var(--surface-white, #FFFFFF);
+  color: var(--text-dark, #11212D);
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. NAVIGATION HEADER ADAPTATIONS
+   ========================================================================== */
+.intl-page-header .nav-link {
+  position: relative;
+}
+
+.intl-page-header .nav-link.active {
+  color: var(--text-dark, #11212D);
+  font-weight: 700;
+}
+
+.intl-page-header .active-orange-bar {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--primary-orange, #F9570C);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   2. HERO SECTION & VISUAL COMPOSITE
+   ========================================================================== */
+.intl-hero-section {
+  position: relative;
+  background-color: #FFFFFF;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 60px;
+  z-index: 1;
+}
+
+/* Left Palm & Skyline Watermark Graphic (Identical to Attractions) */
+.intl-watermark-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.intl-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+  opacity: 0.85;
+}
+
+/* Panoramic World Landmarks Montage Backdrop (Identical to Attractions) */
+.intl-panorama-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.8) 26%, #000000 40%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.8) 26%, #000000 40%);
+}
+
+.intl-panorama-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+.intl-panorama-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 35%);
+  pointer-events: none;
+}
+
+/* Hero Container Grid (Identical to Attractions: 1fr 1.25fr) */
+.intl-hero-container {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+}
+
+.intl-hero-content {
+  position: relative;
+  z-index: 4;
+  max-width: 500px;
+}
+
+/* Breadcrumbs (Identical to Attractions) */
+.intl-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-body);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.intl-breadcrumbs a {
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.intl-breadcrumbs a:hover {
+  color: var(--primary-orange);
+}
+
+.intl-breadcrumbs .bc-sep {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.intl-breadcrumbs .bc-current {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* Orange Script Subtitle (Identical to Attractions: 34px) */
+.intl-script-subtitle {
+  display: block;
+  font-family: var(--font-script);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Main Heading (Identical to Attractions: 58px, 800 weight, -1.5px tracking) */
+.intl-main-heading {
+  font-family: var(--font-heading);
+  font-size: 58px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin: 0 0 18px 0;
+}
+
+/* Lead Paragraph (Identical to Attractions: 16px, 1.6 line-height) */
+.intl-lead-desc {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0 0 34px 0;
+}
+
+/* 3 Trust Pillars (Identical Typography & Sizing to Attractions) */
+.intl-trust-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.intl-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intl-trust-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #E8F8F5;
+  color: #0D9488;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.intl-trust-item:hover .intl-trust-icon {
+  transform: translateY(-2px);
+}
+
+.intl-trust-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.intl-trust-copy strong {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.intl-trust-copy span {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   3. FLOATING SEARCH / FILTER BAR (Overlapping Hero Section)
+   ========================================================================== */
+.intl-search-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -38px;
+  margin-bottom: 20px;
+}
+
+.intl-search-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.intl-search-card {
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 10px 12px 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  transition: box-shadow 0.3s ease;
+}
+
+.intl-search-card:hover {
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12), 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Segments */
+.intl-search-segment {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 16px;
+  transition: background 0.2s ease;
+  user-select: none;
+}
+
+.intl-search-segment:hover {
+  background: #F8FAFC;
+}
+
+.intl-segment-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #E8F8F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0D9488;
+}
+
+.intl-segment-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  flex: 1;
+}
+
+.intl-segment-label {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.intl-segment-value {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.intl-segment-chevron {
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.intl-search-segment:hover .intl-segment-chevron {
+  transform: translateY(2px);
+  color: var(--text-dark);
+}
+
+.intl-segment-divider {
+  width: 1px;
+  height: 38px;
+  background-color: #E2E8F0;
+  flex-shrink: 0;
+}
+
+/* Submit Action Button (Identical to Attractions: 15px 42px, radius 50px) */
+.intl-search-btn {
+  background: var(--primary-orange);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 42px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 18px rgba(249, 87, 12, 0.35);
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.intl-search-btn:hover {
+  background: var(--primary-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(249, 87, 12, 0.45);
+}
+
+.intl-search-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.intl-search-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   4. RESPONSIVE ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .intl-hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .intl-main-heading {
+    font-size: 48px;
+  }
+
+  .intl-script-subtitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .intl-watermark-left {
+    width: 220px;
+    opacity: 0.4;
+  }
+
+  .intl-hero-section {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .intl-hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .intl-hero-content {
+    max-width: 100%;
+  }
+
+  .intl-main-heading {
+    font-size: 42px;
+  }
+
+  .intl-script-subtitle {
+    font-size: 28px;
+  }
+
+  .intl-panorama-wrap {
+    width: 100%;
+    opacity: 0.35;
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  }
+
+  .intl-search-card {
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .intl-search-segment {
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .intl-segment-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .intl-search-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intl-hero-container,
+  .intl-search-container {
+    padding: 0 16px;
+  }
+
+  .intl-main-heading {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .intl-script-subtitle {
+    font-size: 26px;
+  }
+
+  .intl-trust-row {
+    gap: 16px;
+  }
+
+  .intl-trust-item {
+    width: 100%;
+  }
+}

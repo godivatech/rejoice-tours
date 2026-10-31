@@ -1,0 +1,1766 @@
+/* ==========================================================================
+   ROUTES OF DUBAI — ATTRACTIONS PAGE STYLESHEET (attractions.css)
+   Modular architecture: Isolated scoped styles for attractions.html
+   ========================================================================== */
+
+/* Page Container & Sticky Footer Pinning */
+.attractions-page {
+  background-color: var(--bg-page);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.attractions-page main {
+  flex: 1 0 auto;
+}
+
+/* Header Refinement on Attractions Page */
+.attractions-page .main-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 50;
+}
+
+/* ==========================================================================
+   1. ATTRACTIONS HERO SECTION
+   ========================================================================== */
+.attractions-hero-section {
+  position: relative;
+  background-color: #FFFFFF;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 60px;
+  z-index: 1;
+}
+
+/* Left Palm & Skyline Watermark Graphic (Rendered from authentic asset) */
+.attractions-watermark-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.watermark-graphic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+  opacity: 0.85;
+}
+
+/* Wide Panoramic Backdrop Layer (Blended with Soft Mask) */
+.attractions-panorama-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.8) 26%, #000000 40%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.8) 26%, #000000 40%);
+}
+
+.attractions-panorama-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+
+.panorama-soft-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 35%);
+  pointer-events: none;
+}
+
+/* Hero Container Grid */
+.attractions-hero-container {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+}
+
+/* Left Content Column */
+.attractions-hero-content {
+  position: relative;
+  z-index: 4;
+  max-width: 500px;
+}
+
+/* Breadcrumbs */
+.attractions-breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-body);
+  margin-bottom: 20px;
+}
+
+.attractions-breadcrumbs a {
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.attractions-breadcrumbs a:hover {
+  color: var(--primary-orange);
+}
+
+.attractions-breadcrumbs .bc-sep {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.attractions-breadcrumbs .bc-current {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+/* Orange Script Subtitle */
+.attractions-script-subtitle {
+  display: block;
+  font-family: var(--font-script);
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Main Heading */
+.attractions-main-heading {
+  font-family: var(--font-heading);
+  font-size: 58px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin: 0 0 18px 0;
+}
+
+/* Lead Paragraph */
+.attractions-lead-paragraph {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-body);
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0 0 34px 0;
+}
+
+/* Trust Badges Inline Row */
+.attractions-trust-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.attractions-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.attractions-trust-item .trust-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #E8F8F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.attractions-trust-item:hover .trust-icon-box {
+  transform: translateY(-2px);
+}
+
+.attractions-trust-item .trust-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.attractions-trust-item .trust-copy strong {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.attractions-trust-item .trust-copy span {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-body);
+}
+
+/* Center & Right Visual Stage */
+.attractions-hero-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+}
+
+/* Tilted Polaroid Photo Card */
+.hero-polaroid-wrap {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.hero-polaroid-card {
+  background: #FFFFFF;
+  padding: 10px 10px 12px 10px;
+  border-radius: 12px;
+  transform: rotate(-5.5deg);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 210px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-polaroid-card:hover {
+  transform: rotate(-3deg) scale(1.04);
+}
+
+.polaroid-photo-frame {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #E2E8F0;
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.polaroid-caption-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 8px;
+}
+
+.polaroid-caption-name {
+  font-family: var(--font-script);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1;
+}
+
+.polaroid-pin-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Upper Sky Flight Trajectory & Cursive Quote */
+.sky-flight-decoration {
+  position: absolute;
+  top: 10px;
+  right: 140px;
+  z-index: 4;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sky-script-quote {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-script);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.08;
+  text-align: right;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.8);
+}
+
+.sky-plane-trajectory {
+  position: relative;
+  width: 130px;
+  height: 90px;
+}
+
+.sky-trail-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sky-ascending-jet {
+  position: absolute;
+  top: 10px;
+  right: 6px;
+  transform: rotate(32deg);
+}
+
+/* ==========================================================================
+   2. FLOATING SEARCH / FILTER BAR (Overlapping Hero Section)
+   ========================================================================== */
+.attractions-search-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -38px;
+  margin-bottom: 20px;
+}
+
+.search-filter-outer-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.attraction-search-card {
+  background: #FFFFFF;
+  border-radius: 28px;
+  padding: 10px 12px 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+}
+
+.search-field-segment {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 16px;
+  transition: background 0.2s ease;
+  user-select: none;
+}
+
+.search-field-segment:hover {
+  background: #F8FAFC;
+}
+
+.segment-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #E8F8F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0D9488;
+}
+
+.segment-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  flex: 1;
+}
+
+.segment-label {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.segment-value {
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.segment-chevron {
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.search-field-segment:hover .segment-chevron {
+  transform: translateY(2px);
+  color: var(--text-dark);
+}
+
+.search-divider {
+  width: 1px;
+  height: 38px;
+  background-color: #E2E8F0;
+  flex-shrink: 0;
+}
+
+.search-submit-btn {
+  background: var(--primary-orange);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 42px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(249, 87, 12, 0.35);
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.search-submit-btn:hover {
+  background: var(--primary-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(249, 87, 12, 0.45);
+}
+
+/* ==========================================================================
+   3. CATEGORY FILTER PILL TABS CAROUSEL
+   ========================================================================== */
+.attractions-categories-section {
+  padding: 8px 0 50px;
+  background-color: transparent;
+}
+
+.category-tabs-outer-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.category-tabs-carousel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 6px 4px 16px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-tabs-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-tab-btn {
+  background: #FFFFFF;
+  border: 1px solid #EEF2F6;
+  border-radius: 50px;
+  padding: 6px 18px 6px 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.cat-tab-btn:hover {
+  transform: translateY(-2px);
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.cat-tab-btn.active {
+  background: #0C4D50;
+  border-color: #0C4D50;
+  box-shadow: 0 8px 24px rgba(12, 77, 80, 0.28);
+}
+
+.cat-tab-btn.active .cat-label {
+  color: #FFFFFF;
+}
+
+.cat-tab-btn.active .cat-icon-square {
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+}
+
+.cat-icon-square {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #E8F8F5;
+  color: #0D9488;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cat-thumb-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #E2E8F0;
+  display: block;
+}
+
+.cat-thumb-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.cat-label {
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.25;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .sky-flight-decoration {
+    right: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .attractions-watermark-left {
+    width: 220px;
+    opacity: 0.4;
+  }
+
+  .attractions-hero-section {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .attractions-hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .attractions-hero-content {
+    max-width: 100%;
+  }
+
+  .attractions-panorama-wrap {
+    width: 100%;
+    opacity: 0.35;
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  }
+
+  .attractions-hero-stage {
+    min-height: 320px;
+    justify-content: center;
+  }
+
+  .hero-polaroid-wrap {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sky-flight-decoration {
+    right: 20px;
+    top: 0;
+  }
+
+  .attraction-search-card {
+    flex-wrap: wrap;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .search-divider {
+    display: none;
+  }
+
+  .search-field-segment {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 200px;
+  }
+
+  .search-submit-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .attractions-watermark-left {
+    display: none;
+  }
+
+  .attractions-main-heading {
+    font-size: 40px;
+  }
+
+  .attractions-script-subtitle {
+    font-size: 28px;
+  }
+
+  .attractions-lead-paragraph {
+    font-size: 15px;
+  }
+
+  .attractions-trust-row {
+    gap: 18px;
+  }
+
+  .sky-flight-decoration {
+    display: none;
+  }
+
+  .search-field-segment {
+    flex: 1 1 100%;
+  }
+
+  .attractions-search-section {
+    margin-top: -20px;
+  }
+}
+
+/* ==========================================================================
+   5. SECTION 2: TOP ATTRACTIONS IN DUBAI
+   ========================================================================== */
+.top-attractions-section {
+  padding-top: 24px;
+  padding-bottom: 84px;
+  background-color: transparent;
+}
+
+.top-attractions-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Header Row */
+.top-attractions-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+}
+
+.header-text-col {
+  max-width: 620px;
+}
+
+.sec-script-subtitle {
+  display: block;
+  font-family: var(--font-script);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.sec-main-heading {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+}
+
+.sec-lead-desc {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  color: var(--text-body);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.header-controls-col {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.view-all-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 50px;
+  padding: 11px 24px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: #11212D;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.view-all-pill-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.view-all-pill-btn:hover {
+  border-color: var(--primary-orange);
+  color: var(--primary-orange);
+  box-shadow: 0 4px 14px rgba(249, 87, 12, 0.15);
+  transform: translateY(-1px);
+}
+
+.view-all-pill-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.carousel-arrow-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #11212D;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  outline: none;
+}
+
+.carousel-arrow-btn:hover {
+  border-color: #0D9488;
+  color: #0D9488;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.15);
+}
+
+/* 4-Card Grid */
+.attractions-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* Attraction Card */
+.attraction-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.attraction-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+  border-color: rgba(13, 148, 136, 0.25);
+}
+
+/* Card Media Area (Flush to edges) */
+.card-media-wrap {
+  position: relative;
+  width: 100%;
+  height: 228px;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.attraction-card:hover .card-img {
+  transform: scale(1.06);
+}
+
+/* Status Badge */
+.status-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+}
+
+.badge-orange {
+  background-color: #F9570C;
+  box-shadow: 0 4px 12px rgba(249, 87, 12, 0.3);
+}
+
+.badge-teal {
+  background-color: #0D9488;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+/* Wishlist Heart Button */
+.wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #11212D;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.12);
+  color: #EF4444;
+}
+
+.wishlist-btn.active {
+  color: #EF4444;
+}
+
+.wishlist-btn.active svg {
+  fill: #EF4444;
+}
+
+/* Seamless Rating Tab Badge (cuts into bottom-left of photo) */
+.rating-pill {
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  z-index: 2;
+  background: #FFFFFF;
+  border-radius: 12px 12px 0 0;
+  padding: 6px 14px 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rating-score {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1;
+}
+
+.rating-count {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #64748B;
+  line-height: 1;
+}
+
+/* Card Body (Clean background, generous padding) */
+.card-body {
+  padding: 16px 18px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #FFFFFF;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1.25;
+  margin: 0 0 8px 0;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #64748B;
+  margin-bottom: 16px;
+}
+
+.loc-pin-svg {
+  flex-shrink: 0;
+}
+
+/* Meta Row (Clean horizontal row, no dividing lines) */
+.card-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+.meta-item svg {
+  color: #94A3B8;
+  flex-shrink: 0;
+}
+
+/* Card Footer Row */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 12px;
+}
+
+.card-price-col {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.price-label {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #94A3B8;
+  margin-bottom: 4px;
+}
+
+.price-value {
+  font-family: var(--font-heading);
+  font-size: 21px;
+  font-weight: 800;
+  color: #11212D;
+}
+
+.card-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 50px;
+  padding: 9px 20px;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #11212D;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.card-details-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.card-details-btn:hover {
+  border-color: #0D9488;
+  color: #0D9488;
+  background: #F8FAFC;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.12);
+}
+
+.card-details-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1200px) {
+  .attractions-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-attractions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-controls-col {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sec-main-heading {
+    font-size: 32px;
+  }
+
+  .attractions-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 3: SPECIAL EXPERIENCES PROMO BANNER
+   ========================================================================== */
+.special-experiences-section {
+  padding: 20px 0 80px;
+  background-color: transparent;
+  position: relative;
+}
+
+.experiences-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.experiences-banner-card {
+  position: relative;
+  background: #F1F7F6;
+  border: 1px solid rgba(13, 123, 114, 0.12);
+  border-radius: 32px;
+  display: flex;
+  min-height: 380px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(13, 123, 114, 0.04);
+}
+
+.svg-clip-def {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Left Media Column with Organic S-Wave Curve Cutout */
+.experiences-media-col {
+  position: relative;
+  width: 43%;
+  min-width: 380px;
+  flex-shrink: 0;
+  border-radius: 32px 0 0 32px;
+  clip-path: url(#aquarium-curve);
+  -webkit-clip-path: url(#aquarium-curve);
+  overflow: hidden;
+  background: #0C4D50;
+}
+
+.experiences-aquarium-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center left;
+  display: block;
+}
+
+/* Right Content Column */
+.experiences-content-col {
+  position: relative;
+  flex: 1;
+  padding: 44px 44px 38px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+/* Looping Jetliner Contrail Decoration */
+.exp-sky-plane {
+  position: absolute;
+  top: 24px;
+  right: 170px;
+  width: 130px;
+  height: 75px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.exp-trail-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.exp-jetliner {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  transform: rotate(45deg);
+  color: #0D7B72;
+}
+
+/* Authentic Faint Watermark on Far Right */
+.exp-palm-watermark {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  height: 100%;
+  width: 260px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+  overflow: hidden;
+}
+
+.exp-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+}
+
+/* Typography Hierarchy */
+.exp-text-block {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.exp-script-subtitle {
+  display: inline-block;
+  font-family: var(--font-script), 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.exp-main-heading {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px 0;
+}
+
+.exp-lead-desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0 0 32px 0;
+  max-width: 520px;
+}
+
+/* Bottom Action Row */
+.exp-bottom-action-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.exp-features-group {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.exp-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exp-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0D7B72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(13, 123, 114, 0.22);
+}
+
+.exp-feature-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.exp-feature-label strong {
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #11212D;
+}
+
+.exp-feature-label span {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748B;
+}
+
+/* Explore All Attractions CTA Button */
+.exp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary-orange);
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(249, 87, 12, 0.35);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.exp-cta-btn:hover {
+  background: var(--primary-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(249, 87, 12, 0.45);
+}
+
+.exp-cta-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.exp-cta-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive Adaptations for Promo Banner */
+@media (max-width: 1200px) {
+  .exp-sky-plane {
+    right: 120px;
+  }
+
+  .exp-features-group {
+    gap: 18px;
+  }
+
+  .exp-main-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .experiences-banner-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .experiences-media-col {
+    width: 100%;
+    min-width: 100%;
+    height: 320px;
+    clip-path: none;
+    -webkit-clip-path: none;
+    border-radius: 32px 32px 0 0;
+  }
+
+  .experiences-content-col {
+    padding: 32px 28px;
+  }
+
+  .exp-sky-plane {
+    top: 20px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .special-experiences-section {
+    padding: 10px 0 60px;
+  }
+
+  .experiences-container {
+    padding: 0 16px;
+  }
+
+  .experiences-banner-card {
+    border-radius: 22px;
+  }
+
+  .experiences-media-col {
+    height: 240px;
+    border-radius: 22px 22px 0 0;
+  }
+
+  .exp-main-heading {
+    font-size: 26px;
+  }
+
+  .exp-sky-plane {
+    display: none;
+  }
+
+  .exp-bottom-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .exp-features-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .exp-cta-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   SECTION 4: WHY EXPLORE DUBAI WITH US?
+   ========================================================================== */
+.why-explore-section {
+  padding: 45px 0 65px;
+  background-color: #FFFFFF;
+}
+
+.why-explore-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+.why-explore-header-col {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-explore-heading {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.why-explore-accent-bar {
+  display: block;
+  width: 32px;
+  height: 3.5px;
+  background: var(--primary-orange);
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.why-explore-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.why-feature-card {
+  background: #FFFFFF;
+  border: 1px solid #EEF2F6;
+  border-radius: 20px;
+  padding: 22px 20px 24px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.why-feature-card:hover {
+  transform: translateY(-3px);
+  border-color: #CBD5E1;
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.08);
+}
+
+.why-card-top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.why-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #E8F8F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0D9488;
+}
+
+.why-card-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.why-card-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 5: EXPLORE MORE OF DUBAI CTA BANNER
+   ========================================================================== */
+.explore-more-banner-section {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  background: #F8FAFC;
+}
+
+.explore-more-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.explore-more-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.explore-more-inner-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 30px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Tilted Polaroid on Far Left */
+.explore-polaroid-anchor {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: -55px;
+  margin-left: 10px;
+}
+
+.explore-polaroid-card {
+  width: 175px;
+  background: #FFFFFF;
+  padding: 8px 8px 24px 8px;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.24);
+  transform: rotate(-6deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-polaroid-card:hover {
+  transform: rotate(-3deg) scale(1.03);
+  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.32);
+}
+
+.explore-polaroid-photo {
+  width: 100%;
+  height: 155px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+
+.polaroid-traveler-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Center Stage Content */
+.explore-more-center-stage {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+
+.explore-more-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-more-heading {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1.2;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.015em;
+}
+
+.explore-more-lead {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #334155;
+  margin: 0;
+}
+
+/* Action Group: Airplane & CTA Button */
+.explore-more-action-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.explore-airplane-trail {
+  position: relative;
+  width: 80px;
+  height: 36px;
+  pointer-events: none;
+}
+
+.explore-trail-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.explore-jet-icon {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  transform: rotate(45deg);
+  color: var(--primary-orange);
+}
+
+.explore-enquire-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary-orange);
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 13px 30px;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(249, 87, 12, 0.4);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.explore-enquire-btn:hover {
+  background: var(--primary-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(249, 87, 12, 0.5);
+}
+
+.explore-enquire-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.explore-enquire-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive Adaptations for Sections 4 & 5 */
+@media (max-width: 1200px) {
+  .why-explore-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .why-explore-header-col {
+    flex: auto;
+    width: 100%;
+  }
+
+  .why-explore-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explore-more-center-stage {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .explore-more-inner-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 50px 24px 40px;
+  }
+
+  .explore-polaroid-anchor {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .explore-more-center-stage {
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+  }
+
+  .explore-airplane-trail {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-explore-section {
+    padding: 30px 0 45px;
+  }
+
+  .why-explore-container {
+    padding: 0 16px;
+  }
+
+  .why-explore-heading {
+    font-size: 26px;
+  }
+
+  .why-explore-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .explore-more-heading {
+    font-size: 24px;
+  }
+
+  .explore-more-lead {
+    font-size: 13.5px;
+  }
+
+  .explore-enquire-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

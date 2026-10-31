@@ -85,4 +85,48 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Attraction Category Tabs Selection
+  const catTabs = document.querySelectorAll('.cat-tab-btn');
+  if (catTabs.length > 0) {
+    catTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        catTabs.forEach((t) => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+      });
+    });
+  }
+
+  // Wishlist Heart Buttons Toggle
+  const wishlistBtns = document.querySelectorAll('.wishlist-btn');
+  wishlistBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      btn.classList.toggle('active');
+      const heartPath = btn.querySelector('svg path');
+      if (btn.classList.contains('active')) {
+        btn.querySelector('svg').setAttribute('fill', '#EF4444');
+      } else {
+        btn.querySelector('svg').setAttribute('fill', 'none');
+      }
+    });
+  });
+
+  // Top Attractions Carousel Arrow Navigation
+  const prevBtn = document.getElementById('attractions-prev-btn');
+  const nextBtn = document.getElementById('attractions-next-btn');
+  const track = document.getElementById('top-attractions-track');
+
+  if (prevBtn && nextBtn && track) {
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
 });

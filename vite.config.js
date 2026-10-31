@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         dubaiVisa: resolve(__dirname, 'dubai-visa.html'),
+        attractions: resolve(__dirname, 'attractions.html'),
+        internationalVisas: resolve(__dirname, 'international-visas.html'),
       },
     },
   },
