@@ -475,3 +475,603 @@
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   4. SECTION 2: TOP DESTINATIONS CAROUSEL
+   ========================================================================== */
+.intl-destinations-section {
+  position: relative;
+  padding: 48px 0 64px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Faint Decorative Right Watermark */
+.dest-watermark-right {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  bottom: -40px;
+  width: 320px;
+  height: 120%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  transform: scaleX(-1);
+  opacity: 0.14;
+}
+
+.dest-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.dest-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Row: Title on Left, Controls on Right */
+.dest-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.dest-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.dest-script-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1.1;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.dest-main-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  color: #0F2A28;
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Right Controls: View All Button & Arrows */
+.dest-controls-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dest-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  background: #FFFFFF;
+  border: 1.5px solid #DCE3EB;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1E293B;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.dest-view-all-btn:hover {
+  border-color: #0F2A28;
+  color: #0F2A28;
+  background-color: #F8FAFC;
+  transform: translateY(-1px);
+}
+
+.dest-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dest-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #334155;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.dest-arrow-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  color: #0F2A28;
+  transform: scale(1.05);
+}
+
+.dest-arrow-btn:active {
+  transform: scale(0.96);
+}
+
+/* Carousel Track & Cards Layout */
+.dest-carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dest-carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px 4px 22px;
+}
+
+.dest-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.dest-card-item {
+  flex: 0 0 176px;
+  min-width: 176px;
+  max-width: 188px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dest-card-box {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #EEF2F6;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.25s ease;
+}
+
+.dest-card-item:hover .dest-card-box {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.13);
+  border-color: #E2E8F0;
+}
+
+/* Photo Stage - Generous Height */
+.dest-card-photo {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  background: #F1F5F9;
+  border-radius: 19px 19px 0 0;
+}
+
+.dest-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dest-card-item:hover .dest-card-photo img {
+  transform: scale(1.06);
+}
+
+/* Circular Flag Badge - Bigger & Straddling Junction */
+.dest-flag-badge {
+  position: absolute;
+  top: 169px; /* 190px - (42px / 2) = 169px */
+  left: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3.5px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  background: #FFFFFF;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dest-flag-badge svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Card Bottom Info */
+.dest-card-info {
+  padding: 28px 12px 16px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  background: #FFFFFF;
+  border-radius: 0 0 19px 19px;
+}
+
+.dest-country-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0F2A28;
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dest-card-arrow {
+  display: inline-flex;
+  align-items: center;
+  color: #0F2A28;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dest-card-item:hover .dest-card-arrow {
+  transform: translateX(4px);
+  color: var(--primary-orange, #F9570C);
+}
+
+/* Active Pill Under Selected Destination */
+.dest-active-indicator {
+  width: 32px;
+  height: 3.5px;
+  background-color: var(--primary-orange, #F9570C);
+  border-radius: 2px;
+  margin: 12px auto 0;
+  transition: opacity 0.2s ease;
+}
+
+.dest-card-item:not(.active) .dest-active-indicator {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Responsive Adaptations for Section 2 */
+@media (max-width: 1200px) {
+  .dest-card-item {
+    flex: 0 0 168px;
+    min-width: 168px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dest-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dest-controls-wrap {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dest-card-item {
+    flex: 0 0 160px;
+    min-width: 160px;
+  }
+
+  .dest-card-photo {
+    height: 175px;
+  }
+
+  .dest-flag-badge {
+    top: 155px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dest-main-heading {
+    font-size: 28px;
+  }
+
+  .dest-script-subtitle {
+    font-size: 24px;
+  }
+
+  .dest-card-item {
+    flex: 0 0 152px;
+    min-width: 152px;
+  }
+
+  .dest-card-photo {
+    height: 165px;
+  }
+
+  .dest-flag-badge {
+    top: 146px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ==========================================================================
+   5. SECTION 3: CHOOSE YOUR VISA TYPE
+   ========================================================================== */
+.visa-types-section {
+  position: relative;
+  padding: 64px 0 84px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Atmospheric Line-Art Watermarks */
+.visa-types-watermark-left {
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  width: 280px;
+  height: 85%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.16;
+}
+
+.visa-types-watermark-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 340px;
+  height: 180px;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.flight-trail-svg {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 300px;
+  height: 150px;
+  pointer-events: none;
+}
+
+.visa-types-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+.visa-types-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header Row */
+.visa-types-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 32px;
+}
+
+.visa-types-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.visa-types-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1.1;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.visa-types-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #0F2A28;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.visa-types-accent-bar {
+  width: 32px;
+  height: 3.5px;
+  background-color: var(--primary-orange, #F9570C);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.visa-types-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* 4-Column Grid */
+.visa-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Individual Card */
+.visa-type-card {
+  background: #FFFFFF;
+  border: 1px solid #EEF2F6;
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+  padding: 24px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.visa-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+  border-color: #E2E8F0;
+}
+
+/* Card Top Row */
+.visa-type-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.visa-type-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #E8F8F5;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.visa-type-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.visa-type-copy {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+}
+
+.visa-type-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0F2A28;
+  line-height: 1.25;
+  margin: 0 0 6px;
+}
+
+.visa-type-summary {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Card Footer */
+.visa-type-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #F8FAFC;
+}
+
+.visa-type-link {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0F2A28;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.visa-type-link-arrow {
+  transition: transform 0.2s ease;
+}
+
+.visa-type-card:hover .visa-type-link {
+  color: var(--primary-orange, #F9570C);
+}
+
+.visa-type-card:hover .visa-type-link-arrow {
+  transform: translateX(3px);
+}
+
+.visa-type-circle-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #FFF2EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-orange, #F9570C);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.visa-type-card:hover .visa-type-circle-btn {
+  background: var(--primary-orange, #F9570C);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .visa-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visa-types-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .visa-types-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

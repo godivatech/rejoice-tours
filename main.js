@@ -129,4 +129,29 @@ document.addEventListener('DOMContentLoaded', () => {
       track.scrollBy({ left: 320, behavior: 'smooth' });
     });
   }
+
+  // Top Destinations Carousel Navigation (International Visas Page)
+  const destPrevBtn = document.getElementById('dest-prev-btn');
+  const destNextBtn = document.getElementById('dest-next-btn');
+  const destTrack = document.getElementById('destinations-track');
+
+  if (destPrevBtn && destNextBtn && destTrack) {
+    destPrevBtn.addEventListener('click', () => {
+      destTrack.scrollBy({ left: -360, behavior: 'smooth' });
+    });
+    destNextBtn.addEventListener('click', () => {
+      destTrack.scrollBy({ left: 360, behavior: 'smooth' });
+    });
+  }
+
+  // Destination Card Active State Selection
+  const destCards = document.querySelectorAll('.dest-card-item');
+  if (destCards.length > 0) {
+    destCards.forEach((card) => {
+      card.addEventListener('click', (e) => {
+        destCards.forEach((c) => c.classList.remove('active'));
+        card.classList.add('active');
+      });
+    });
+  }
 });

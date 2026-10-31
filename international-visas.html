@@ -105,7 +105,7 @@
 
       <!-- Faint Tropical Line-Art Palm Watermark on Far Left -->
       <div class="intl-watermark-left" aria-hidden="true">
-        <img src="./assets/images/attractions-left-watermark.png" alt="" class="intl-watermark-img" loading="eager" />
+        <img src="./assets/images/international-left-watermark.png" alt="" class="intl-watermark-img" loading="eager" />
       </div>
 
       <!-- Panoramic World Landmarks Montage Backdrop (Blended with Soft Mask) -->
@@ -265,6 +265,564 @@
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 2: TOP DESTINATIONS CAROUSEL -->
+    <!-- ============================================== -->
+    <section class="intl-destinations-section" id="top-destinations">
+
+      <!-- Faint Tropical Line-Art Watermark on Right Edge -->
+      <div class="dest-watermark-right" aria-hidden="true">
+        <img src="./assets/images/international-left-watermark.png" alt="" class="dest-watermark-img" loading="lazy" />
+      </div>
+
+      <div class="site-container dest-container">
+
+        <!-- Section Header Row: Title & Controls -->
+        <div class="dest-header-row">
+          <div class="dest-title-wrap">
+            <span class="dest-script-subtitle">Popular</span>
+            <h2 class="dest-main-heading">Top Destinations</h2>
+          </div>
+
+          <div class="dest-controls-wrap">
+            <a href="#all-countries" class="dest-view-all-btn">
+              <span>View All Countries</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <div class="dest-nav-arrows">
+              <button type="button" class="dest-arrow-btn prev" id="dest-prev-btn" aria-label="Scroll left">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button type="button" class="dest-arrow-btn next" id="dest-next-btn" aria-label="Scroll right">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 Destination Cards Track -->
+        <div class="dest-carousel-wrapper">
+          <div class="dest-carousel-track" id="destinations-track">
+
+            <!-- Card 1: United Kingdom (Active) -->
+            <a href="#uk-visa" class="dest-card-item active">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-uk-bigben.png" alt="United Kingdom" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="United Kingdom">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-uk">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-uk)">
+                      <rect width="36" height="36" fill="#012169" />
+                      <path d="M0,0 L36,36 M36,0 L0,36" stroke="#FFFFFF" stroke-width="6" />
+                      <path d="M0,0 L36,36 M36,0 L0,36" stroke="#C8102E" stroke-width="2.5" />
+                      <path d="M18,0 V36 M0,18 H36" stroke="#FFFFFF" stroke-width="9" />
+                      <path d="M18,0 V36 M0,18 H36" stroke="#C8102E" stroke-width="5.5" />
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">United Kingdom</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 2: United States -->
+            <a href="#usa-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-usa-liberty.png" alt="United States" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="United States">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-usa">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-usa)">
+                      <rect width="36" height="36" fill="#B22234" />
+                      <rect y="2.77" width="36" height="2.77" fill="#FFFFFF" />
+                      <rect y="8.31" width="36" height="2.77" fill="#FFFFFF" />
+                      <rect y="13.85" width="36" height="2.77" fill="#FFFFFF" />
+                      <rect y="19.38" width="36" height="2.77" fill="#FFFFFF" />
+                      <rect y="24.92" width="36" height="2.77" fill="#FFFFFF" />
+                      <rect y="30.46" width="36" height="2.77" fill="#FFFFFF" />
+                      <rect width="16" height="19.38" fill="#3C3B6E" />
+                      <g fill="#FFFFFF">
+                        <circle cx="3.5" cy="3.5" r="1.1" />
+                        <circle cx="8" cy="3.5" r="1.1" />
+                        <circle cx="12.5" cy="3.5" r="1.1" />
+                        <circle cx="5.75" cy="6.8" r="1.1" />
+                        <circle cx="10.25" cy="6.8" r="1.1" />
+                        <circle cx="3.5" cy="10.1" r="1.1" />
+                        <circle cx="8" cy="10.1" r="1.1" />
+                        <circle cx="12.5" cy="10.1" r="1.1" />
+                        <circle cx="5.75" cy="13.4" r="1.1" />
+                        <circle cx="10.25" cy="13.4" r="1.1" />
+                        <circle cx="3.5" cy="16.7" r="1.1" />
+                        <circle cx="8" cy="16.7" r="1.1" />
+                        <circle cx="12.5" cy="16.7" r="1.1" />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">United States</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 3: Canada -->
+            <a href="#canada-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-canada-cntower.png" alt="Canada" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="Canada">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-ca">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-ca)">
+                      <rect width="36" height="36" fill="#D80027" />
+                      <rect x="9" width="18" height="36" fill="#FFFFFF" />
+                      <!-- Red Maple Leaf -->
+                      <path
+                        d="M18 9 L19.4 13.8 L23.2 13.2 L20.5 16.5 L23.8 19.5 L19.8 19.8 L20.5 24 L18.5 22.8 L18.5 27 L17.5 27 L17.5 22.8 L15.5 24 L16.2 19.8 L12.2 19.5 L15.5 16.5 L12.8 13.2 L16.6 13.8 Z"
+                        fill="#D80027" />
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">Canada</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 4: Australia -->
+            <a href="#australia-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-australia-opera.png" alt="Australia" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="Australia">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-au">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-au)">
+                      <rect width="36" height="36" fill="#00008B" />
+                      <!-- Mini Union Jack Canton -->
+                      <g>
+                        <rect width="18" height="12" fill="#012169" />
+                        <path d="M0,0 L18,12 M18,0 L0,12" stroke="#FFFFFF" stroke-width="2.5" />
+                        <path d="M0,0 L18,12 M18,0 L0,12" stroke="#C8102E" stroke-width="1.2" />
+                        <path d="M9,0 V12 M0,6 H18" stroke="#FFFFFF" stroke-width="3.5" />
+                        <path d="M9,0 V12 M0,6 H18" stroke="#C8102E" stroke-width="2" />
+                      </g>
+                      <!-- Commonwealth Star & Southern Cross -->
+                      <circle cx="9" cy="24" r="3.2" fill="#FFFFFF" />
+                      <circle cx="28" cy="7" r="1.3" fill="#FFFFFF" />
+                      <circle cx="23" cy="13" r="1.3" fill="#FFFFFF" />
+                      <circle cx="31" cy="15" r="1.3" fill="#FFFFFF" />
+                      <circle cx="27" cy="24" r="1.3" fill="#FFFFFF" />
+                      <circle cx="29" cy="19" r="0.9" fill="#FFFFFF" />
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">Australia</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 5: Schengen Countries -->
+            <a href="#schengen-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-schengen-europe.png" alt="Schengen Countries" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="Schengen Countries">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-eu">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-eu)">
+                      <rect width="36" height="36" fill="#003399" />
+                      <!-- 12 Gold Stars in circle around center (18, 18) -->
+                      <g fill="#FFCC00">
+                        <polygon
+                          points="18,6.2 18.5,7.7 20,7.7 18.8,8.6 19.3,10.1 18,9.2 16.7,10.1 17.2,8.6 16,7.7 17.5,7.7" />
+                        <polygon
+                          points="23.9,7.8 24.4,9.3 25.9,9.3 24.7,10.2 25.2,11.7 23.9,10.8 22.6,11.7 23.1,10.2 21.9,9.3 23.4,9.3" />
+                        <polygon
+                          points="28.2,12.1 28.7,13.6 30.2,13.6 29,14.5 29.5,16 28.2,15.1 26.9,16 27.4,14.5 26.2,13.6 27.7,13.6" />
+                        <polygon
+                          points="29.8,18 30.3,19.5 31.8,19.5 30.6,20.4 31.1,21.9 29.8,21 28.5,21.9 29,20.4 27.8,19.5 29.3,19.5" />
+                        <polygon
+                          points="28.2,23.9 28.7,25.4 30.2,25.4 29,26.3 29.5,27.8 28.2,26.9 26.9,27.8 27.4,26.3 26.2,25.4 27.7,25.4" />
+                        <polygon
+                          points="23.9,28.2 24.4,29.7 25.9,29.7 24.7,30.6 25.2,32.1 23.9,31.2 22.6,32.1 23.1,30.6 21.9,29.7 23.4,29.7" />
+                        <polygon
+                          points="18,29.8 18.5,31.3 20,31.3 18.8,32.2 19.3,33.7 18,32.8 16.7,33.7 17.2,32.2 16,31.3 17.5,31.3" />
+                        <polygon
+                          points="12.1,28.2 12.6,29.7 14.1,29.7 12.9,30.6 13.4,32.1 12.1,31.2 10.8,32.1 11.3,30.6 10.1,29.7 11.6,29.7" />
+                        <polygon
+                          points="7.8,23.9 8.3,25.4 9.8,25.4 8.6,26.3 9.1,27.8 7.8,26.9 6.5,27.8 7,26.3 5.8,25.4 7.3,25.4" />
+                        <polygon
+                          points="6.2,18 6.7,19.5 8.2,19.5 7,20.4 7.5,21.9 6.2,21 4.9,21.9 5.4,20.4 4.2,19.5 5.7,19.5" />
+                        <polygon
+                          points="7.8,12.1 8.3,13.6 9.8,13.6 8.6,14.5 9.1,16 7.8,15.1 6.5,16 7,14.5 5.8,13.6 7.3,13.6" />
+                        <polygon
+                          points="12.1,7.8 12.6,9.3 14.1,9.3 12.9,10.2 13.4,11.7 12.1,10.8 10.8,11.7 11.3,10.2 10.1,9.3 11.6,9.3" />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">Schengen Countries</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 6: Singapore -->
+            <a href="#singapore-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-singapore-mbs.png" alt="Singapore" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="Singapore">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-sg">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-sg)">
+                      <rect width="36" height="18" fill="#ED2939" />
+                      <rect y="18" width="36" height="18" fill="#FFFFFF" />
+                      <!-- White Crescent & 5 Stars -->
+                      <circle cx="8.5" cy="9" r="5.2" fill="#FFFFFF" />
+                      <circle cx="10" cy="9" r="4.3" fill="#ED2939" />
+                      <g fill="#FFFFFF">
+                        <circle cx="12" cy="5.8" r="0.8" />
+                        <circle cx="13.7" cy="7.8" r="0.8" />
+                        <circle cx="13" cy="10.8" r="0.8" />
+                        <circle cx="10.5" cy="11.2" r="0.8" />
+                        <circle cx="10" cy="7.2" r="0.8" />
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">Singapore</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 7: Malaysia -->
+            <a href="#malaysia-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-malaysia-petronas.png" alt="Malaysia" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="Malaysia">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-my">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-my)">
+                      <rect width="36" height="36" fill="#CC0001" />
+                      <rect y="2.57" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect y="7.71" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect y="12.85" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect y="18" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect y="23.14" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect y="28.28" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect y="33.42" width="36" height="2.57" fill="#FFFFFF" />
+                      <rect width="18" height="20.5" fill="#000066" />
+                      <!-- Yellow crescent & 14-point star -->
+                      <circle cx="8" cy="10.2" r="5.2" fill="#FFCC00" />
+                      <circle cx="9.5" cy="10.2" r="4.3" fill="#000066" />
+                      <polygon
+                        points="13,7.5 13.6,9.5 15.6,9.5 14,10.7 14.6,12.7 13,11.5 11.4,12.7 12,10.7 10.4,9.5 12.4,9.5"
+                        fill="#FFCC00" />
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">Malaysia</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+            <!-- Card 8: Thailand -->
+            <a href="#thailand-visa" class="dest-card-item">
+              <div class="dest-card-box">
+                <div class="dest-card-photo">
+                  <img src="./assets/images/dest-thailand-temple.png" alt="Thailand" loading="lazy">
+                </div>
+                <div class="dest-flag-badge" title="Thailand">
+                  <svg viewBox="0 0 36 36" class="flag-icon" xmlns="http://www.w3.org/2000/svg">
+                    <clipPath id="circle-th">
+                      <circle cx="18" cy="18" r="18" />
+                    </clipPath>
+                    <g clip-path="url(#circle-th)">
+                      <rect width="36" height="6" fill="#A51931" />
+                      <rect y="6" width="36" height="6" fill="#F4F5F8" />
+                      <rect y="12" width="36" height="12" fill="#2D2A4A" />
+                      <rect y="24" width="36" height="6" fill="#F4F5F8" />
+                      <rect y="30" width="36" height="6" fill="#A51931" />
+                    </g>
+                  </svg>
+                </div>
+                <div class="dest-card-info">
+                  <span class="dest-country-title">Thailand</span>
+                  <span class="dest-card-arrow">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="dest-active-indicator" aria-hidden="true"></div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- SECTION 3: CHOOSE YOUR VISA TYPE -->
+    <!-- ============================================== -->
+    <section class="visa-types-section" id="visa-types">
+
+      <!-- Faint Tropical Line-Art Watermark on Far Left -->
+      <div class="visa-types-watermark-left" aria-hidden="true">
+        <img src="./assets/images/international-left-watermark.png" alt="" class="visa-types-watermark-img" loading="lazy" />
+      </div>
+
+      <!-- Faint Flight Trail & Landmark Watermark on Far Right -->
+      <div class="visa-types-watermark-right" aria-hidden="true">
+        <!-- Looping Contrail & Jetliner Matching Exact Design -->
+        <svg viewBox="0 0 320 160" class="flight-trail-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Birds in Sky -->
+          <path d="M 68 28 C 72 23 76 27 80 25 C 84 27 88 23 92 28" stroke="#0D7B6F" stroke-width="1.6"
+            stroke-linecap="round" fill="none" opacity="0.35" />
+          <path d="M 132 54 C 135 51 138 54 141 52 C 144 54 147 51 150 54" stroke="#0D7B6F" stroke-width="1.3"
+            stroke-linecap="round" fill="none" opacity="0.25" />
+
+          <!-- Continuous Looping Dashed Flight Trail -->
+          <path d="M 15 110 C 45 95, 75 35, 115 32 C 150 30, 160 115, 130 115 C 105 115, 120 70, 165 45 C 195 30, 225 35, 225 68 C 225 95, 205 95, 205 70 C 205 45, 245 40, 275 22"
+            stroke="#0D7B6F" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round" opacity="0.5" fill="none" />
+
+          <!-- Ascending Commercial Airliner Silhouette -->
+          <g transform="translate(275, 18) rotate(35) scale(0.65)" fill="#0D7B6F" opacity="0.8">
+            <path
+              d="M 14 0 C 15.5 0 17 1.5 17 4 L 17 18 L 36 28 L 36 32 L 17 26 L 17 37 L 23 42 L 23 46 L 15 44 L 7 46 L 7 42 L 13 37 L 13 26 L -6 32 L -6 28 L 13 18 L 13 4 C 13 1.5 14.5 0 14 0 Z" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="site-container visa-types-container">
+
+        <!-- Section Header Row: Title on Left, Description on Right -->
+        <div class="visa-types-header">
+          <div class="visa-types-title-wrap">
+            <span class="visa-types-subtitle">Choose Your</span>
+            <h2 class="visa-types-heading">Visa Type</h2>
+            <div class="visa-types-accent-bar" aria-hidden="true"></div>
+          </div>
+
+          <p class="visa-types-desc">
+            We assist with different types of visas based on your travel purpose.<br class="desktop-only">
+            Select the option that suits your needs or contact us for guidance.
+          </p>
+        </div>
+
+        <!-- 4 Visa Types Grid -->
+        <div class="visa-types-grid">
+
+          <!-- Card 1: Tourist Visa -->
+          <div class="visa-type-card">
+            <div class="visa-type-top">
+              <div class="visa-type-icon-wrap">
+                <img src="./assets/images/visa-type-tourist.png" alt="Tourist Visa Icon" class="visa-type-icon-img" loading="lazy" />
+              </div>
+              <div class="visa-type-copy">
+                <h3 class="visa-type-title">Tourist Visa</h3>
+                <p class="visa-type-summary">For leisure, holidays and sightseeing.</p>
+              </div>
+            </div>
+            <div class="visa-type-footer">
+              <a href="#tourist-visa" class="visa-type-link">
+                <span>View Details</span>
+                <span class="visa-type-link-arrow">→</span>
+              </a>
+              <a href="#tourist-visa" class="visa-type-circle-btn" aria-label="View Tourist Visa Details">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Business Visa -->
+          <div class="visa-type-card">
+            <div class="visa-type-top">
+              <div class="visa-type-icon-wrap">
+                <img src="./assets/images/visa-type-business.png" alt="Business Visa Icon" class="visa-type-icon-img" loading="lazy" />
+              </div>
+              <div class="visa-type-copy">
+                <h3 class="visa-type-title">Business Visa</h3>
+                <p class="visa-type-summary">For business meetings, conferences and work.</p>
+              </div>
+            </div>
+            <div class="visa-type-footer">
+              <a href="#business-visa" class="visa-type-link">
+                <span>View Details</span>
+                <span class="visa-type-link-arrow">→</span>
+              </a>
+              <a href="#business-visa" class="visa-type-circle-btn" aria-label="View Business Visa Details">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Student Visa -->
+          <div class="visa-type-card">
+            <div class="visa-type-top">
+              <div class="visa-type-icon-wrap">
+                <img src="./assets/images/visa-type-student.png" alt="Student Visa Icon" class="visa-type-icon-img" loading="lazy" />
+              </div>
+              <div class="visa-type-copy">
+                <h3 class="visa-type-title">Student Visa</h3>
+                <p class="visa-type-summary">For higher studies abroad.</p>
+              </div>
+            </div>
+            <div class="visa-type-footer">
+              <a href="#student-visa" class="visa-type-link">
+                <span>View Details</span>
+                <span class="visa-type-link-arrow">→</span>
+              </a>
+              <a href="#student-visa" class="visa-type-circle-btn" aria-label="View Student Visa Details">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Family Visit Visa -->
+          <div class="visa-type-card">
+            <div class="visa-type-top">
+              <div class="visa-type-icon-wrap">
+                <img src="./assets/images/visa-type-family.png" alt="Family Visit Visa Icon" class="visa-type-icon-img" loading="lazy" />
+              </div>
+              <div class="visa-type-copy">
+                <h3 class="visa-type-title">Family Visit Visa</h3>
+                <p class="visa-type-summary">To visit family and relatives overseas.</p>
+              </div>
+            </div>
+            <div class="visa-type-footer">
+              <a href="#family-visit-visa" class="visa-type-link">
+                <span>View Details</span>
+                <span class="visa-type-link-arrow">→</span>
+              </a>
+              <a href="#family-visit-visa" class="visa-type-circle-btn" aria-label="View Family Visit Visa Details">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
 
         </div>
 
