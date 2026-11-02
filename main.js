@@ -157,4 +157,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Contact Page Form Select Dynamic Color
+  const formSelects = document.querySelectorAll('.form-select');
+  formSelects.forEach((sel) => {
+    const updateSelectColor = () => {
+      if (!sel.value) {
+        sel.style.color = '#94A3B8';
+      } else {
+        sel.style.color = '#0F2A28';
+      }
+    };
+    updateSelectColor();
+    sel.addEventListener('change', updateSelectColor);
+  });
 });

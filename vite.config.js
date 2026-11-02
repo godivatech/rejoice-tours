@@ -13,6 +13,7 @@ export default defineConfig({
         attractions: resolve(__dirname, 'attractions.html'),
         internationalVisas: resolve(__dirname, 'international-visas.html'),
         about: resolve(__dirname, 'about.html'),
+        contact: resolve(__dirname, 'contact.html'),
       },
     },
   },

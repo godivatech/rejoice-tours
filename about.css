@@ -416,3 +416,835 @@
     gap: 16px;
   }
 }
+
+/* ==========================================================================
+   SECTION 3: IMPACT & STATS COUNTER BANNER
+   ========================================================================== */
+.about-stats-section {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 80px;
+  background-color: #FFFFFF;
+}
+
+.about-stats-banner {
+  position: relative;
+  width: 100%;
+  min-height: 140px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(5, 68, 61, 0.16);
+  background-color: #05443D;
+  display: flex;
+  align-items: center;
+}
+
+/* Backdrop Image with Emerald Teal Waves & Dubai Skyline */
+.about-stats-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-stats-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  display: block;
+}
+
+.about-stats-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 68, 61, 0.3) 0%, rgba(5, 68, 61, 0.12) 55%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
+/* Horizontal Metrics Grid */
+.about-stats-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 50px;
+  padding-right: 17%; /* Leaves right section for Burj Khalifa skyline */
+}
+
+.about-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #FFFFFF;
+  transition: transform 0.25s ease;
+}
+
+.about-stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.about-stat-icon-wrap {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFFFFF;
+}
+
+.about-stat-icon {
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.about-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about-stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.about-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.25;
+}
+
+.about-stat-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.24);
+  flex-shrink: 0;
+  margin: 0 10px;
+}
+
+/* Responsive Adaptations for Stats Banner */
+@media (max-width: 1200px) {
+  .about-stats-grid {
+    padding: 28px 36px;
+    padding-right: 14%;
+  }
+
+  .about-stat-number {
+    font-size: 28px;
+  }
+
+  .about-stat-label {
+    font-size: 12.5px;
+  }
+
+  .about-stat-item {
+    gap: 12px;
+  }
+
+  .about-stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-stats-banner {
+    border-radius: 24px;
+  }
+
+  .about-stats-overlay {
+    background: linear-gradient(90deg, rgba(5, 68, 61, 0.82) 0%, rgba(5, 68, 61, 0.6) 100%);
+  }
+
+  .about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 28px;
+    padding: 30px 32px;
+    padding-right: 32px;
+  }
+
+  .about-stat-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .about-stats-section {
+    padding: 0 0 60px;
+  }
+
+  .about-stats-banner {
+    border-radius: 20px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 26px 20px;
+  }
+
+  .about-stat-number {
+    font-size: 26px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 4: WHAT WE DO / OUR CORE SERVICES
+   ========================================================================== */
+.about-services-section {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 100px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+/* Atmospheric Bottom-Left Mint Glow */
+.about-services-glow {
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(209, 242, 235, 0.55) 0%, rgba(209, 242, 235, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-services-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Left Intro Header */
+.about-services-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-services-subtitle-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.about-services-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1.1;
+}
+
+.about-services-underline-svg {
+  display: block;
+  width: 105px;
+  height: 10px;
+  margin-top: -2px;
+}
+
+.about-services-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--primary-dark, #0F2A28);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.about-services-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #64748B;
+  line-height: 1.6;
+  max-width: 270px;
+  margin: 0;
+}
+
+/* Right 3-Card Grid */
+.about-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about-service-card {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid #EEF2F6;
+  box-shadow: 0 8px 24px rgba(15, 42, 40, 0.04);
+  padding: 34px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 295px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.about-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(15, 42, 40, 0.08);
+  border-color: rgba(13, 123, 111, 0.25);
+}
+
+/* Circular Icon Wrap */
+.service-card-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.service-card-icon-wrap.mint {
+  background-color: #E6F7F3;
+}
+
+.service-card-icon-wrap.peach {
+  background-color: #FFEFE6;
+}
+
+.service-card-svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Typography Inside Card */
+.service-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-dark, #0F2A28);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+
+.service-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0 0 24px;
+  flex-grow: 1;
+}
+
+/* Underlined CTA Link */
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-dark, #0F2A28);
+  margin-top: auto;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.service-link-text {
+  position: relative;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #0D7B6F;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.service-link-arrow {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.service-card-link:hover .service-link-arrow {
+  transform: translateX(4px);
+}
+
+.service-card-link:hover .service-link-text {
+  border-color: var(--primary-orange, #F9570C);
+  color: var(--primary-orange, #F9570C);
+}
+
+/* Responsive Adaptations */
+@media (max-width: 1200px) {
+  .about-services-container {
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+  }
+
+  .about-services-heading {
+    font-size: 36px;
+  }
+
+  .about-service-card {
+    padding: 28px 22px 24px;
+  }
+
+  .service-card-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-services-section {
+    padding: 20px 0 80px;
+  }
+
+  .about-services-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-services-desc {
+    max-width: 100%;
+  }
+
+  .about-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-services-section {
+    padding: 10px 0 60px;
+  }
+
+  .about-services-heading {
+    font-size: 30px;
+  }
+
+  .about-services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-service-card {
+    min-height: auto;
+    padding: 26px 20px 22px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 5: WHY CHOOSE ROUTES OF DUBAI (OUR ADVANTAGE)
+   ========================================================================== */
+.about-why-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 90px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+/* Left Watermark (Burj Al Arab Outline) */
+.about-why-watermark-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 90%;
+  max-height: 380px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.why-watermark-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: left bottom;
+  display: block;
+}
+
+/* Right Watermark (Mint Tropical Palm Tree SVG) */
+.about-why-watermark-right {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  height: 95%;
+  max-height: 390px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.why-watermark-palm-svg {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* Center Content Container */
+.about-why-container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-why-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.about-why-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.about-why-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--primary-dark, #0F2A28);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.about-why-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15.5px;
+  font-weight: 400;
+  color: #4A5E5B;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/* 4 Advantage Items Horizontal Grid */
+.about-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.about-why-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.25s ease;
+}
+
+.about-why-item:hover {
+  transform: translateY(-2px);
+}
+
+.about-why-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #E2F5EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.about-why-item:hover .about-why-icon-wrap {
+  background-color: #D1F0E6;
+}
+
+.about-why-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.about-why-item-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.why-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--primary-dark, #0F2A28);
+  line-height: 1.25;
+}
+
+.why-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #64748B;
+  line-height: 1.45;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .about-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 28px;
+  }
+
+  .about-why-watermark-left {
+    max-height: 280px;
+    opacity: 0.6;
+  }
+
+  .about-why-watermark-right {
+    max-height: 280px;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-why-section {
+    padding: 60px 0 70px;
+  }
+
+  .about-why-heading {
+    font-size: 32px;
+  }
+
+  .about-why-desc {
+    font-size: 14.5px;
+  }
+
+  .about-why-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-why-watermark-left,
+  .about-why-watermark-right {
+    opacity: 0.25;
+  }
+}
+
+/* ==========================================================================
+   SECTION 6: PLAN YOUR NEXT JOURNEY CTA BANNER
+   ========================================================================== */
+.about-cta-section {
+  position: relative;
+  width: 100%;
+  padding: 30px 0 90px;
+  background-color: #FFFFFF;
+}
+
+.about-cta-banner {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(5, 68, 61, 0.16);
+  background-color: #05443D;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Background Photographic Image & Smooth Blend Overlay */
+.about-cta-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center left;
+  display: block;
+}
+
+.about-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 68, 61, 0) 0%, rgba(5, 68, 61, 0.1) 45%, rgba(5, 68, 61, 0.7) 62%, rgba(5, 68, 61, 0.95) 80%);
+  pointer-events: none;
+}
+
+/* Right Content Copy & Action Buttons */
+.about-cta-content {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  max-width: 540px;
+  padding: 44px 56px 44px 20px;
+  margin-left: auto;
+}
+
+.about-cta-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.about-cta-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.55;
+  margin: 0 0 28px;
+  max-width: 460px;
+}
+
+/* CTA Action Buttons */
+.about-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.about-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-orange, #F9570C);
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(249, 87, 12, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.about-cta-btn-primary:hover {
+  background-color: #EA4F08;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(249, 87, 12, 0.45);
+}
+
+.cta-arrow-svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.2s ease;
+}
+
+.about-cta-btn-primary:hover .cta-arrow-svg {
+  transform: translateX(3px);
+}
+
+.about-cta-btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-cta-btn-whatsapp:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.cta-whatsapp-svg {
+  width: 19px;
+  height: 19px;
+}
+
+/* Responsive Adaptations for CTA Banner */
+@media (max-width: 1100px) {
+  .about-cta-content {
+    width: 55%;
+    padding: 36px 40px 36px 20px;
+  }
+
+  .about-cta-heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-cta-banner {
+    border-radius: 24px;
+    min-height: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .about-cta-overlay {
+    background: linear-gradient(180deg, rgba(5, 68, 61, 0.35) 0%, rgba(5, 68, 61, 0.88) 45%, rgba(5, 68, 61, 0.98) 100%);
+  }
+
+  .about-cta-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 160px 28px 36px;
+    margin: 0;
+  }
+
+  .about-cta-heading {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 540px) {
+  .about-cta-section {
+    padding: 10px 0 60px;
+  }
+
+  .about-cta-content {
+    padding: 140px 20px 30px;
+  }
+
+  .about-cta-heading {
+    font-size: 24px;
+  }
+
+  .about-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .about-cta-btn-primary,
+  .about-cta-btn-whatsapp {
+    justify-content: center;
+  }
+}
+
+
+
