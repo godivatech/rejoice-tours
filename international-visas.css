@@ -1075,3 +1075,998 @@
     gap: 16px;
   }
 }
+
+/* ==========================================================================
+   6. SECTION 4: HOW IT WORKS / SIMPLE STEPS
+   ========================================================================== */
+.intl-how-works-section {
+  position: relative;
+  padding: 20px 0 80px;
+  background-color: #FFFFFF;
+}
+
+/* Outer Mint Banner Card */
+.how-works-banner-card {
+  position: relative;
+  background: #E8F8F5;
+  border-radius: 30px;
+  padding: 48px 52px 56px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(13, 123, 111, 0.05);
+  border: 1px solid rgba(13, 123, 111, 0.08);
+}
+
+/* Faint Tropical Landmarks Watermark on Left */
+.how-works-watermark-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  height: 90%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.22;
+  overflow: hidden;
+}
+
+.how-works-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+/* Header Row */
+.how-works-header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 46px;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.how-works-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.how-works-script {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1.1;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.how-works-main-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #0F2A28;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.how-works-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 4px;
+  max-width: 520px;
+}
+
+/* 4 Steps Grid */
+.how-works-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Step Item */
+.how-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Circular Node */
+.how-step-node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease;
+}
+
+.how-step-card:hover .how-step-node {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 8px 20px rgba(13, 123, 111, 0.16);
+}
+
+.how-step-node-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Connecting Dashed Line & Forward Arrow */
+.how-step-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 64px;
+  right: -24px;
+  height: 2px;
+  background-image: repeating-linear-gradient(to right, #0D7B6F 0, #0D7B6F 6px, transparent 6px, transparent 12px);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.how-step-connector-arrow {
+  position: absolute;
+  top: 26px;
+  right: -8px;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid #0D7B6F;
+  border-right: 2px solid #0D7B6F;
+  transform: rotate(45deg);
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Looping Flight Contrail & Airplane (Step 4 Anchor) */
+.how-step-card:last-child {
+  position: relative;
+}
+
+.how-step-flight-loop {
+  position: absolute;
+  top: -95px;
+  left: 20px;
+  width: 300px;
+  height: 160px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.how-flight-loop-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Step Content */
+.how-step-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.how-step-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.how-step-num-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 8px;
+  background: #D1F2EB;
+  color: #0F2A28;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  border-radius: 9999px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.how-step-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #0F2A28;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.how-step-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Responsive Adaptations for How It Works */
+@media (max-width: 1200px) {
+  .how-works-banner-card {
+    padding: 40px 36px 48px;
+  }
+
+  .how-works-steps-grid {
+    gap: 20px;
+  }
+
+  .how-step-card:not(:last-child)::after {
+    right: -16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .how-works-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .how-works-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 24px;
+  }
+
+  .how-step-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .how-step-connector-arrow {
+    display: none;
+  }
+
+  .how-step-flight-loop {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-works-banner-card {
+    padding: 32px 20px 40px;
+    border-radius: 22px;
+  }
+
+  .how-works-main-heading {
+    font-size: 30px;
+    white-space: normal;
+  }
+
+  .how-works-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 5: GENERAL - REQUIRED DOCUMENTS
+   ========================================================================== */
+.intl-docs-section {
+  position: relative;
+  padding: 85px 0 95px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+/* Big Ben / Westminster Architectural Line-Drawing Watermark */
+.intl-docs-watermark-right {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  width: 380px;
+  height: 480px;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: 0.9;
+}
+
+.intl-docs-watermark-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.35;
+}
+
+.docs-landmark-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.intl-docs-container {
+  position: relative;
+  z-index: 2;
+}
+
+.intl-docs-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 68px;
+  align-items: center;
+}
+
+/* Left Column: Photo Card with Layered Mint Plate */
+.intl-docs-visual {
+  position: relative;
+  max-width: 530px;
+  margin-left: 14px;
+}
+
+.intl-docs-plate {
+  position: absolute;
+  top: 16px;
+  left: -14px;
+  right: 14px;
+  bottom: -16px;
+  background-color: #D6F4EE;
+  border-radius: 28px 72px 72px 28px;
+  z-index: 1;
+}
+
+.intl-docs-photo-card {
+  position: relative;
+  z-index: 2;
+  border-radius: 28px 72px 72px 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15, 42, 40, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
+  aspect-ratio: 16 / 10;
+  background: #E2E8F0;
+}
+
+.intl-docs-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Column: General / Required Documents Content */
+.intl-docs-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.intl-docs-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.intl-docs-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #0F2A28;
+  line-height: 1.2;
+  margin: 0 0 14px;
+  letter-spacing: -0.5px;
+}
+
+.intl-docs-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #5A6E6B;
+  line-height: 1.6;
+  max-width: 490px;
+  margin: 0 0 28px;
+}
+
+/* Checklist Items */
+.intl-docs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.intl-docs-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.intl-docs-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #0D7B6F;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(13, 123, 111, 0.25);
+}
+
+.intl-docs-check svg {
+  width: 14px;
+  height: 14px;
+}
+
+.intl-docs-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #1E293B;
+  line-height: 1.4;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+  .intl-docs-grid {
+    gap: 40px;
+  }
+  
+  .intl-docs-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  .intl-docs-section {
+    padding: 60px 0 70px;
+  }
+
+  .intl-docs-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .intl-docs-visual {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .intl-docs-watermark-right {
+    opacity: 0.2;
+    width: 280px;
+    height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intl-docs-title {
+    font-size: 28px;
+  }
+
+  .intl-docs-subtitle {
+    font-size: 28px;
+  }
+
+  .intl-docs-plate,
+  .intl-docs-photo-card {
+    border-radius: 20px 48px 48px 20px;
+  }
+
+  .intl-docs-label {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 6: FREQUENTLY ASKED QUESTIONS (FAQ)
+   ========================================================================== */
+.intl-faq-section {
+  position: relative;
+  padding: 85px 0 100px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.intl-faq-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 42px;
+}
+
+.intl-faq-title-col {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+}
+
+.intl-faq-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-orange, #F9570C);
+  line-height: 1;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.intl-faq-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0F2A28;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px;
+}
+
+.intl-faq-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #5A6E6B;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+.intl-faq-accent-bar {
+  width: 36px;
+  height: 3.5px;
+  background-color: var(--primary-orange, #F9570C);
+  border-radius: 2px;
+}
+
+/* Center-Right Dubai Skyline Line-Art Watermark */
+.intl-faq-watermark {
+  position: absolute;
+  top: -24px;
+  right: 175px;
+  width: 460px;
+  height: 165px;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.intl-faq-watermark-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+/* Right View All FAQs Button */
+.intl-faq-btn-wrap {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  padding-top: 14px;
+}
+
+.intl-faq-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  border-radius: 9999px;
+  border: 1.5px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #0F2A28;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(15, 42, 40, 0.03);
+}
+
+.intl-faq-view-btn:hover {
+  border-color: #0D7B6F;
+  color: #0D7B6F;
+  box-shadow: 0 4px 16px rgba(13, 123, 111, 0.14);
+}
+
+.intl-faq-btn-arrow {
+  transition: transform 0.25s ease;
+}
+
+.intl-faq-view-btn:hover .intl-faq-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* 2-Column Grid of Accordion Cards */
+.intl-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.intl-faq-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.intl-faq-item {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(15, 42, 40, 0.02);
+}
+
+.intl-faq-item:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 6px 18px rgba(15, 42, 40, 0.05);
+}
+
+.intl-faq-item.active {
+  border-color: #0D7B6F;
+  box-shadow: 0 6px 20px rgba(13, 123, 111, 0.09);
+}
+
+.intl-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.intl-faq-label-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.intl-faq-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #E8F8F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #0D7B6F;
+}
+
+.intl-faq-icon-box svg {
+  display: block;
+}
+
+.intl-faq-question {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #0F2A28;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.intl-faq-toggle-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F2A28;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+}
+
+.intl-faq-item.active .intl-faq-toggle-icon {
+  transform: rotate(45deg);
+  color: var(--primary-orange, #F9570C);
+}
+
+.intl-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+  padding: 0 20px 0 72px;
+}
+
+.intl-faq-item.active .intl-faq-answer {
+  max-height: 220px;
+  padding: 0 20px 18px 72px;
+}
+
+.intl-faq-answer-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #5A6E6B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive FAQ Queries */
+@media (max-width: 1200px) {
+  .intl-faq-watermark {
+    width: 360px;
+    right: 140px;
+  }
+}
+
+@media (max-width: 991px) {
+  .intl-faq-header-wrap {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intl-faq-watermark {
+    display: none;
+  }
+
+  .intl-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .intl-faq-heading {
+    font-size: 30px;
+  }
+
+  .intl-faq-question {
+    font-size: 14.5px;
+  }
+
+  .intl-faq-answer {
+    padding-left: 20px;
+  }
+}
+
+/* ==========================================================================
+   SECTION 7: EXPLORE MORE OF DUBAI CTA BANNER
+   ========================================================================== */
+.explore-more-banner-section {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  background: #F8FAFC;
+}
+
+.explore-more-bg-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.explore-more-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.explore-more-inner-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 30px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Tilted Polaroid on Far Left */
+.explore-polaroid-anchor {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: -55px;
+  margin-left: 10px;
+}
+
+.explore-polaroid-card {
+  width: 175px;
+  background: #FFFFFF;
+  padding: 8px 8px 24px 8px;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.24);
+  transform: rotate(-6deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-polaroid-card:hover {
+  transform: rotate(-3deg) scale(1.03);
+  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.32);
+}
+
+.explore-polaroid-photo {
+  width: 100%;
+  height: 155px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+
+.polaroid-traveler-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Center Stage Content */
+.explore-more-center-stage {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-left: auto;
+  margin-right: 120px;
+}
+
+.explore-more-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.explore-more-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #11212D;
+  line-height: 1.2;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.015em;
+}
+
+.explore-more-lead {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #334155;
+  margin: 0;
+}
+
+/* Action Group: Airplane & CTA Button */
+.explore-more-action-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.explore-airplane-trail {
+  position: relative;
+  width: 80px;
+  height: 36px;
+  pointer-events: none;
+}
+
+.explore-trail-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.explore-jet-icon {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  transform: rotate(45deg);
+  color: var(--primary-orange, #F9570C);
+}
+
+.explore-enquire-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary-orange, #F9570C);
+  color: #FFFFFF;
+  border-radius: 50px;
+  padding: 13px 30px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(249, 87, 12, 0.4);
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.explore-enquire-btn:hover {
+  background: var(--primary-orange-hover, #E04804);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(249, 87, 12, 0.5);
+}
+
+.explore-enquire-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.explore-enquire-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive Adaptations for Explore More Banner */
+@media (max-width: 1200px) {
+  .explore-more-center-stage {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .explore-more-inner-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 50px 24px 40px;
+  }
+
+  .explore-polaroid-anchor {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .explore-more-center-stage {
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+  }
+
+  .explore-airplane-trail {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .explore-more-heading {
+    font-size: 24px;
+  }
+
+  .explore-more-lead {
+    font-size: 13.5px;
+  }
+
+  .explore-enquire-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

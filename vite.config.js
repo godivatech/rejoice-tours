@@ -12,6 +12,7 @@ export default defineConfig({
         dubaiVisa: resolve(__dirname, 'dubai-visa.html'),
         attractions: resolve(__dirname, 'attractions.html'),
         internationalVisas: resolve(__dirname, 'international-visas.html'),
+        about: resolve(__dirname, 'about.html'),
       },
     },
   },

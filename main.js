@@ -58,18 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // FAQ Accordion Interactivity
-  const faqButtons = document.querySelectorAll('.faq-accordion-btn');
+  const faqButtons = document.querySelectorAll('.faq-accordion-btn, .intl-faq-trigger');
   if (faqButtons.length > 0) {
     faqButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-accordion-item');
+        const item = btn.closest('.faq-accordion-item, .intl-faq-item');
         const isActive = item.classList.contains('active');
 
-        // Close other accordion items
-        document.querySelectorAll('.faq-accordion-item').forEach((otherItem) => {
+        // Close other accordion items in the same container
+        const parentGrid = item.closest('.intl-faq-grid, .faq-accordion');
+        const allItems = parentGrid ? parentGrid.querySelectorAll('.intl-faq-item, .faq-accordion-item') : document.querySelectorAll('.faq-accordion-item, .intl-faq-item');
+        
+        allItems.forEach((otherItem) => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
-            const otherBtn = otherItem.querySelector('.faq-accordion-btn');
+            const otherBtn = otherItem.querySelector('.faq-accordion-btn, .intl-faq-trigger');
             if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
           }
         });
